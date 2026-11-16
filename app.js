@@ -23,7 +23,7 @@ const CIVS = {
         domains: ['Cosmos','Eternal','Upanishadic'],
         img: 'Brahman.png',
         myth: 'Brahman is the singular, infinite, changeless ground of all existence described in the Upanishads. Neither creator nor created, Brahman is Satyam (Truth), Jnanam (Consciousness), Anantam (Infinity). The Taittiriya Upanishad declares: "Satyam Jnanam Anantam Brahma." All gods, all matter, all souls are expressions of this one undivided reality. The Chandogya Upanishad affirms "Aham Brahmasmi" — I am Brahman — as the supreme mahavakya.',
-        stats: { nature: 'Nirguna (Formless)', texts: 'Upanishads, Vedas', era: '1500–500 BCE', counterpart: 'Atman (Self)' }
+        stats: { nature: 'Nirguna (Formless)', texts: 'Upanishads, Vedas', era: '1500–500 BC', counterpart: 'Atman (Self)' }
       },
       {
         id: 'brahma',
@@ -162,7 +162,7 @@ const CIVS = {
         { name: 'Mahayuga (4 Yugas)', val: '4,320,000 years' },
         { name: 'Kalpa (Brahma\'s Day)', val: '4,320,000,000 years' }
       ],
-      lore: 'The Rigveda\'s Nasadiya Sukta (10.129) begins with the primordial void: "Neither existence nor non-existence was there." The Vedic rishis observed the heliacal risings of nakshatras to fix the timing of yajnas. The Vedanga Jyotisha (c. 1200 BCE) is the first astronomical treatise, tracking the sun and moon through nakshatras. The 19-year Metonic cycle was known as the Sapta-panchashika (5-year yuga) multiplied by ~4.'
+      lore: 'The Rigveda\'s Nasadiya Sukta (10.129) begins with the primordial void: "Neither existence nor non-existence was there." The Vedic rishis observed the heliacal risings of nakshatras to fix the timing of yajnas. The Vedanga Jyotisha (c. 1200 BC) is the first astronomical treatise, tracking the sun and moon through nakshatras. The 19-year Metonic cycle was known as the Sapta-panchashika (5-year yuga) multiplied by ~4.'
     }
   },
 
@@ -292,7 +292,7 @@ const CIVS = {
         { name: 'Shemu (Harvest season)', val: '4 months (Pachons–Mesori)' },
         { name: 'Hour Division', val: '12 day + 12 night hours' }
       ],
-      lore: 'The Pyramid Texts (c. 2400 BCE) are the oldest religious texts in the world, recording the star-knowledge embedded in pyramid architecture. The Great Pyramid\'s southern air shafts pointed to Orion\'s Belt and Thuban (then pole star) c. 2450 BCE. Dendera\'s temple ceiling (c. 50 BCE) contains the famous Circular Zodiac — the earliest complete star map, now in the Louvre. The Egyptian astronomer-priests (Kherep Serqet) tracked 36 decans — star groups rising at 10-day intervals.'
+      lore: 'The Pyramid Texts (c. 2400 BC) are the oldest religious texts in the world, recording the star-knowledge embedded in pyramid architecture. The Great Pyramid\'s southern air shafts pointed to Orion\'s Belt and Thuban (then pole star) c. 2450 BC. Dendera\'s temple ceiling (c. 50 BC) contains the famous Circular Zodiac — the earliest complete star map, now in the Louvre. The Egyptian astronomer-priests (Kherep Serqet) tracked 36 decans — star groups rising at 10-day intervals.'
     }
   },
 
@@ -398,7 +398,7 @@ const CIVS = {
 ],
     calendar: {
       title: 'Greek Lunisolar Calendar (Athenian Metonic Cycle)',
-      system: 'Athens used a lunisolar calendar of 12 or 13 months, beginning at the first new moon after the summer solstice. The Metonic Cycle (Meton of Athens, 432 BCE) discovered that 19 solar years ≈ 235 lunar months, allowing precise calendar intercalation.',
+      system: 'Athens used a lunisolar calendar of 12 or 13 months, beginning at the first new moon after the summer solstice. The Metonic Cycle (Meton of Athens, 432 BC) discovered that 19 solar years ≈ 235 lunar months, allowing precise calendar intercalation.',
       math: [
         '19 Tropical Years = 6939.6018 days',
         '235 Synodic Months = 6939.6887 days',
@@ -406,7 +406,7 @@ const CIVS = {
         '12 ordinary years (354 days) + 7 leap years (384 days) = 19 years',
         'Callippic Cycle: 4 × Metonic − 1 day = 76 years',
         'Hipparchan Cycle: 304 years (4 × Callippic)',
-        'Olympiad: 4-year festival cycle (first: 776 BCE)'
+        'Olympiad: 4-year festival cycle (first: 776 BC)'
       ],
       cycles: [
         { name: 'Athenian Lunar Month', val: '29 or 30 days' },
@@ -418,7 +418,7 @@ const CIVS = {
         { name: 'Saros Cycle (eclipse)', val: '18 years 11 days' },
         { name: 'Exeligmos', val: '3 × Saros = 54 years' }
       ],
-      lore: 'Hipparchus of Nicaea (c. 190–120 BCE) discovered axial precession by comparing positions of Spica with earlier Babylonian records — detecting the equinox point had moved ~2° in 150 years. Eratosthenes (c. 276–194 BCE) calculated Earth\'s circumference to within ~1% using a gnomon at Alexandria and the known distance to Syene. Aristarchus of Samos (c. 310 BCE) proposed the heliocentric model 1,800 years before Copernicus.'
+      lore: 'Hipparchus of Nicaea (c. 190–120 BC) discovered axial precession by comparing positions of Spica with earlier Babylonian records — detecting the equinox point had moved ~2° in 150 years. Eratosthenes (c. 276–194 BC) calculated Earth\'s circumference to within ~1% using a gnomon at Alexandria and the known distance to Syene. Aristarchus of Samos (c. 310 BC) proposed the heliocentric model 1,800 years before Copernicus.'
     }
   },
 
@@ -434,7 +434,7 @@ const CIVS = {
         role: 'Supreme God of Babylon — Lord of the Universe',
         domains: ['Creation','Magic','Justice','Water'],
         img: '',
-        myth: 'Marduk, champion of the younger gods, slew the primordial chaos-dragon Tiamat and from her split body fashioned heaven and earth — as described in the Enuma Elish (c. 1100 BCE), the great Babylonian creation epic. He established 50 divine names (one for each of his powers), fixed the stars in their courses, and created humanity from the blood of Kingu to serve the gods. Babylon\'s great ziggurat Etemenanki ("House of the foundation of heaven and earth") was his temple-mountain.',
+        myth: 'Marduk, champion of the younger gods, slew the primordial chaos-dragon Tiamat and from her split body fashioned heaven and earth — as described in the Enuma Elish (c. 1100 BC), the great Babylonian creation epic. He established 50 divine names (one for each of his powers), fixed the stars in their courses, and created humanity from the blood of Kingu to serve the gods. Babylon\'s great ziggurat Etemenanki ("House of the foundation of heaven and earth") was his temple-mountain.',
         stats: { weapon: 'Marru (spade)', animal: 'Dragon (Mushhushshu)', planet: 'Jupiter', text: 'Enuma Elish' }
       },
       {
@@ -443,8 +443,8 @@ const CIVS = {
         role: 'Goddess of Love, War and Venus',
         domains: ['Love','War','Venus','Fertility','Power'],
         img: '',
-        myth: 'Ishtar (Sumerian: Inanna) is the most powerful goddess of Mesopotamia — goddess of erotic love and brutal warfare simultaneously. Her descent to the underworld through seven gates, surrendering an adornment at each, is one of humanity\'s oldest stories. She demanded the Bull of Heaven to slay Gilgamesh after he refused her. Her planet was Venus, appearing as morning and evening star. The Ishtar Gate of Babylon (575 BCE) was covered in lapis lazuli and depicted her sacred lions.',
-        stats: { planet: 'Venus (morning + evening)', gate: 'Ishtar Gate, Babylon 575 BCE', symbol: 'Eight-pointed star', descent: '7 Gates of the Underworld' }
+        myth: 'Ishtar (Sumerian: Inanna) is the most powerful goddess of Mesopotamia — goddess of erotic love and brutal warfare simultaneously. Her descent to the underworld through seven gates, surrendering an adornment at each, is one of humanity\'s oldest stories. She demanded the Bull of Heaven to slay Gilgamesh after he refused her. Her planet was Venus, appearing as morning and evening star. The Ishtar Gate of Babylon (575 BC) was covered in lapis lazuli and depicted her sacred lions.',
+        stats: { planet: 'Venus (morning + evening)', gate: 'Ishtar Gate, Babylon 575 BC', symbol: 'Eight-pointed star', descent: '7 Gates of the Underworld' }
       },
       {
         id: 'enlil',
@@ -452,7 +452,7 @@ const CIVS = {
         role: 'God of Wind and Supreme Authority',
         domains: ['Wind','Storm','Kingship','Fate','Earth'],
         img: '',
-        myth: 'Enlil, "Lord of Wind," was the active executive power of the Sumerian pantheon. He separated An (sky) from Ki (earth), creating the space for life. He decreed the Great Flood (Atrahasis Epic, c. 1700 BCE) to destroy humanity — the Babylonian Noah story predates the biblical version by over a millennium. His temple Ekur ("Mountain House") at Nippur was the religious center of Sumer. He wrote fate on heavenly tablets.',
+        myth: 'Enlil, "Lord of Wind," was the active executive power of the Sumerian pantheon. He separated An (sky) from Ki (earth), creating the space for life. He decreed the Great Flood (Atrahasis Epic, c. 1700 BC) to destroy humanity — the Babylonian Noah story predates the biblical version by over a millennium. His temple Ekur ("Mountain House") at Nippur was the religious center of Sumer. He wrote fate on heavenly tablets.',
         stats: { temple: 'Ekur at Nippur', tablets: 'Tablets of Destiny', flood: 'Decreed the great deluge', realm: 'Earth and atmosphere' }
       },
       {
@@ -479,7 +479,7 @@ const CIVS = {
         role: 'Sun God — God of Justice and Law',
         domains: ['Sun','Justice','Law','Divination','Truth'],
         img: '',
-        myth: 'Shamash, the all-seeing sun, traverses the sky in a fiery chariot drawn by the divine horses Etana and Kibra, entering through the mountains at dawn and departing at dusk into the Underworld. As supreme judge, he stands above all human law — the famous Code of Hammurabi (c. 1754 BCE) was given to Hammurabi directly by Shamash, depicted on the stele\'s famous relief. He destroys evil with his solar rays and is the patron of diviners.',
+        myth: 'Shamash, the all-seeing sun, traverses the sky in a fiery chariot drawn by the divine horses Etana and Kibra, entering through the mountains at dawn and departing at dusk into the Underworld. As supreme judge, he stands above all human law — the famous Code of Hammurabi (c. 1754 BC) was given to Hammurabi directly by Shamash, depicted on the stele\'s famous relief. He destroys evil with his solar rays and is the patron of diviners.',
         stats: { transport: 'Fiery chariot through sky gates', symbol: 'Winged solar disc + saw', law: 'Hammurabi Code given by Shamash', saw: 'For "cutting through" injustice' }
       }
     ],
@@ -528,7 +528,7 @@ const CIVS = {
 ],
     calendar: {
       title: 'Babylonian Lunisolar Calendar & MUL.APIN Astronomy',
-      system: 'The Babylonian calendar was purely lunar — months began at the first visible crescent after new moon. Intercalary months were added (by royal decree, then systematically from c. 499 BCE) to keep pace with the solar year. The 19-year cycle of intercalation was independently discovered (or borrowed) before the Greek Metonic cycle.',
+      system: 'The Babylonian calendar was purely lunar — months began at the first visible crescent after new moon. Intercalary months were added (by royal decree, then systematically from c. 499 BC) to keep pace with the solar year. The 19-year cycle of intercalation was independently discovered (or borrowed) before the Greek Metonic cycle.',
       math: [
         'Babylonian Synodic Month = 29;31,50,8,20 days (sexagesimal)',
         'Converting: 29 + 31/60 + 50/3600 + 8/216000 + 20/12960000 ≈ 29.530594 days',
@@ -545,10 +545,10 @@ const CIVS = {
         { name: 'Saros Cycle (eclipse)', val: '223 months ≈ 18 yr 11 days' },
         { name: 'Metonic Cycle', val: '235 months = 19 solar years' },
         { name: 'Great Year', val: '3600 years (Sar × 600)' },
-        { name: 'Zodiac Division', val: '12 signs × 30° (invented ~450 BCE)' },
+        { name: 'Zodiac Division', val: '12 signs × 30° (invented ~450 BC)' },
         { name: 'Daily Time Division', val: '12 double-hours (beru)' }
       ],
-      lore: 'The MUL.APIN (c. 1000 BCE) is the foundational Babylonian astronomical compendium listing 66 stars and constellations, paths of the Moon through 17 stars (proto-zodiac), rising and setting dates of stars, and methods for computing intercalation. Babylonian eclipse records in cuneiform stretch back to 747 BCE without interruption — the longest continuous scientific dataset in history. Their System A and B for predicting planetary positions (c. 400 BCE) represent abstract mathematical astronomy, centuries before Hipparchus.'
+      lore: 'The MUL.APIN (c. 1000 BC) is the foundational Babylonian astronomical compendium listing 66 stars and constellations, paths of the Moon through 17 stars (proto-zodiac), rising and setting dates of stars, and methods for computing intercalation. Babylonian eclipse records in cuneiform stretch back to 747 BC without interruption — the longest continuous scientific dataset in history. Their System A and B for predicting planetary positions (c. 400 BC) represent abstract mathematical astronomy, centuries before Hipparchus.'
     }
   },
 
@@ -573,7 +573,7 @@ const CIVS = {
         role: 'Feathered Serpent — God of Wind and Venus',
         domains: ['Wind','Venus','Knowledge','Morning Star','Creation'],
         img: '',
-        myth: 'Quetzalcoatl, the Feathered Serpent, is one of the most ancient deities of Mesoamerica appearing at Teotihuacan c. 100–200 CE. As Ehecatl-Quetzalcoatl he is the wind that clears the path for rain gods. As the Morning Star (Tlahuizcalpantecuhtli) he battles the night to bring light. His mythic departure across the sea to the east — vowing to return in the year Ce Acatl (1 Reed) — created psychological vulnerability when Cortés arrived in 1519 CE.',
+        myth: 'Quetzalcoatl, the Feathered Serpent, is one of the most ancient deities of Mesoamerica appearing at Teotihuacan c. 100–200 AD. As Ehecatl-Quetzalcoatl he is the wind that clears the path for rain gods. As the Morning Star (Tlahuizcalpantecuhtli) he battles the night to bring light. His mythic departure across the sea to the east — vowing to return in the year Ce Acatl (1 Reed) — created psychological vulnerability when Cortés arrived in 1519 AD.',
         stats: { planet: 'Venus (Morning Star)', form: 'Feathered serpent + wind deity', prophecy: 'Return in year Ce Acatl (1 Reed)', site: 'Teotihuacan, Cholula, Chichen Itza' }
       },
       {
@@ -718,7 +718,7 @@ const CIVS = {
         { name: 'New Fire Ceremony', val: 'Every 52 solar years' },
         { name: 'Aztec Sun Ages', val: '5 Suns (current = 5th)' }
       ],
-      lore: 'The Aztec Sun Stone (incorrectly called "Calendar Stone") is a 3.6m, 24-ton basalt disc carved c. 1427 CE depicting the Five Suns cosmology. The four previous suns (4 Jaguar, 4 Wind, 4 Rain, 4 Water) were each destroyed by the gods. The current Fifth Sun (4 Earthquake, or Nahui Ollin) is fated to end in earthquakes. The New Fire Ceremony at the end of each 52-year bundle was the most terrifying Aztec ritual — all fires extinguished, pregnant women locked away lest they become monsters, and the entire empire held its breath waiting for the Pleiades.'
+      lore: 'The Aztec Sun Stone (incorrectly called "Calendar Stone") is a 3.6m, 24-ton basalt disc carved c. 1427 AD depicting the Five Suns cosmology. The four previous suns (4 Jaguar, 4 Wind, 4 Rain, 4 Water) were each destroyed by the gods. The current Fifth Sun (4 Earthquake, or Nahui Ollin) is fated to end in earthquakes. The New Fire Ceremony at the end of each 52-year bundle was the most terrifying Aztec ritual — all fires extinguished, pregnant women locked away lest they become monsters, and the entire empire held its breath waiting for the Pleiades.'
     }
   },
 
@@ -904,14 +904,14 @@ const CIVS = {
 ],
     calendar: {
       title: 'Maya Calendar System — Tzolk\'in, Haab\' and Long Count',
-      system: 'The Maya calendar system is the most sophisticated indigenous calendar ever devised. Three interlocking systems operate simultaneously: Tzolk\'in (260 days), Haab\' (365 days), and the Long Count — a linear count of days from the Creation Date (11 August 3114 BCE in the GMT correlation), capable of tracking millions of years.',
+      system: 'The Maya calendar system is the most sophisticated indigenous calendar ever devised. Three interlocking systems operate simultaneously: Tzolk\'in (260 days), Haab\' (365 days), and the Long Count — a linear count of days from the Creation Date (11 August 3114 BC in the GMT correlation), capable of tracking millions of years.',
       math: [
         "Tzolk'in = 20 day-names × 13 numbers = 260 days",
         "Haab' = 18 months × 20 days + 5 Wayeb' = 365 days",
         "Calendar Round = LCM(260,365) = 18,980 days = 52 Haab' years",
         'Long Count positional notation: Bak\'tun(144000).K\'atun(7200).Tun(360).Winal(20).K\'in(1)',
-        'Creation Date: 4 Ahaw 8 Kumk\'u = 0.0.0.0.0 = Aug 11, 3114 BCE',
-        'Current b\'ak\'tun 14 began: Dec 21, 2012 CE (13.0.0.0.0)',
+        'Creation Date: 4 Ahaw 8 Kumk\'u = 0.0.0.0.0 = Aug 11, 3114 BC',
+        'Current b\'ak\'tun 14 began: Dec 21, 2012 AD (13.0.0.0.0)',
         "Maya Tropical Year: 365.2420 days (error 0.0002 vs modern 365.2422)",
         "Dresden Codex Venus: 2920 days = 8 Haab' = 5 Venus synodic cycles (583.92 days each)"
       ],
@@ -927,7 +927,7 @@ const CIVS = {
         { name: "Piktun", val: '2,880,000 days = 7,885 years' },
         { name: 'Venus Table Cycle', val: '2920 days = 8 solar years' }
       ],
-      lore: 'The Dresden Codex (c. 1200–1250 CE) contains the most precise pre-telescopic astronomical tables ever produced. Its Venus Tables track the synodic cycle of Venus to an accuracy of 2 hours over 500 years. The Maya also tracked Mars (780-day synodic), and the lunar series (lunar node cycle, 6585 days = Saros) and solar eclipse warnings with precision tools only a positional number system with zero could provide. The Maya independently invented the concept of zero — a revolutionary mathematical achievement.'
+      lore: 'The Dresden Codex (c. 1200–1250 AD) contains the most precise pre-telescopic astronomical tables ever produced. Its Venus Tables track the synodic cycle of Venus to an accuracy of 2 hours over 500 years. The Maya also tracked Mars (780-day synodic), and the lunar series (lunar node cycle, 6585 days = Saros) and solar eclipse warnings with precision tools only a positional number system with zero could provide. The Maya independently invented the concept of zero — a revolutionary mathematical achievement.'
     }
   },
 
@@ -1088,7 +1088,7 @@ const CIVS = {
         { name: 'Capacocha Cycle', val: 'Tied to ruler\'s death + accession' },
         { name: 'Pleiades Year', val: 'Heliacal rise governs planting' }
       ],
-      lore: 'The Inca used quipus — knotted string devices — to record astronomical and calendar data. The site of Machu Picchu (c. 1450 CE) contains the famous Intihuatana stone ("Hitching Post of the Sun"), a carved granite pillar aligned to the four cardinal directions. At the equinoxes, the sun sits directly above the stone with no shadow — a physical calendar synchronised to the cosmos. The Antisuyu, Chinchaysuyu, Cuntisuyu, and Collasuyu quarters of the empire were aligned with the solstice and equinox sunrise directions.'
+      lore: 'The Inca used quipus — knotted string devices — to record astronomical and calendar data. The site of Machu Picchu (c. 1450 AD) contains the famous Intihuatana stone ("Hitching Post of the Sun"), a carved granite pillar aligned to the four cardinal directions. At the equinoxes, the sun sits directly above the stone with no shadow — a physical calendar synchronised to the cosmos. The Antisuyu, Chinchaysuyu, Cuntisuyu, and Collasuyu quarters of the empire were aligned with the solstice and equinox sunrise directions.'
     }
   },
 
@@ -1104,7 +1104,7 @@ const CIVS = {
         role: 'War God — Lord of the Young, Beauty and Valor',
         domains: ['War','Youth','Beauty','Peacock','Hills'],
         img: '',
-        myth: 'Murugan, the Tamil deity par excellence, is the most venerated god of the Dravidian south. Son of Shiva and Parvati, born of the fire of six Kritika star-mothers, he defeated the demon Surapadman (split into peacock and rooster — his mount and flag) with his Vel (divine spear). The Sangam literature (3rd c. BCE – 3rd c. CE) identifies him with the kurinji landscape (mountainous hills). His six sacred abodes (Arupadaiveedu) in Tamil Nadu are major pilgrimage sites.',
+        myth: 'Murugan, the Tamil deity par excellence, is the most venerated god of the Dravidian south. Son of Shiva and Parvati, born of the fire of six Kritika star-mothers, he defeated the demon Surapadman (split into peacock and rooster — his mount and flag) with his Vel (divine spear). The Sangam literature (3rd c. BC – 3rd c. AD) identifies him with the kurinji landscape (mountainous hills). His six sacred abodes (Arupadaiveedu) in Tamil Nadu are major pilgrimage sites.',
         stats: { spear: 'Vel (divine lance given by Parvati)', mount: 'Peacock (Mayura) + Rooster banner', faces: '6 (Shanmukha — 6-faced)', abodes: '6 Arupadaiveedu temples, Tamil Nadu' }
       },
       {
@@ -1123,7 +1123,7 @@ const CIVS = {
         domains: ['Victory','War','Paddy','Ancient Tamil'],
         img: '',
         myth: 'Korravai (Tamil: "She who cuts") is the ancient Dravidian war goddess, equivalent to Durga in Tamil tradition — a fierce victor in battle, carrying a sword and shield, her sacred animal the peacock. She rules the Mullai (pastoral) and Palai (wasteland) tinai landscapes. The Sangam age akam (interior/love) and puram (exterior/war) poetry is mapped onto five Dravidian landscapes (tinai), each presided over by different deities and associated with specific flowers, birds, and times of day.',
-        stats: { landscapes: '5 Tamil Tinai (Kurinji, Mullai, Marutham, Neythal, Palai)', period: 'Sangam Age (300 BCE – 300 CE)', texts: 'Tolkappiyam, Purananuru, Akananuru', animal: 'Peacock (in Mullai tinai)' }
+        stats: { landscapes: '5 Tamil Tinai (Kurinji, Mullai, Marutham, Neythal, Palai)', period: 'Sangam Age (300 BC – 300 AD)', texts: 'Tolkappiyam, Purananuru, Akananuru', animal: 'Peacock (in Mullai tinai)' }
       }
     ],
     stars: [
@@ -1258,7 +1258,7 @@ const CIVS = {
         { name: 'Karthigai Deepam', val: 'Full moon in Karthikai month' },
         { name: 'Aadi Perukku', val: '18th day of Aadi month (river festival)' }
       ],
-      lore: 'The Tolkappiyam (c. 3rd century BCE), the oldest extant Tamil grammar, maps the poetic landscape (Akam/Puram) onto astronomical time. The five tinai landscapes correspond to five times of day, five seasons, and five star groups. Tamil astronomers independently developed the Surya Siddhanta (c. 400 CE) astronomical system, calculating the sidereal year to extraordinary precision. Thiruvalluvar\'s Tirukkural, written c. 200 BCE–200 CE, references celestial order as the foundation of ethical life.'
+      lore: 'The Tolkappiyam (c. 3rd century BC), the oldest extant Tamil grammar, maps the poetic landscape (Akam/Puram) onto astronomical time. The five tinai landscapes correspond to five times of day, five seasons, and five star groups. Tamil astronomers independently developed the Surya Siddhanta (c. 400 AD) astronomical system, calculating the sidereal year to extraordinary precision. Thiruvalluvar\'s Tirukkural, written c. 200 BC–200 AD, references celestial order as the foundation of ethical life.'
     }
   },
 
@@ -1538,7 +1538,7 @@ const CIVS = {
       math: [
         'Sexagenary Cycle = LCM(10,12) = 60 years',
         'Chinese Mean Synodic Month = 29.530585 days (excellent precision)',
-        'Chinese Tropical Year (4th c. BCE) = 365.25 days',
+        'Chinese Tropical Year (4th c. BC) = 365.25 days',
         'Intercalary month (Runyue) added when no major solar term falls in month',
         '24 Solar Terms (Jieqi): sun moves 15° along ecliptic = ~15.2 days',
         'Metonic-equivalent: 7 leap months per 19 years = 235 months',
@@ -1555,7 +1555,7 @@ const CIVS = {
         { name: 'Chinese Solar Year', val: '365.2422 days' },
         { name: 'Runyue (Leap Month)', val: '7 months per 19-year cycle' }
       ],
-      lore: 'The oracle bones of the Shang Dynasty (c. 1200 BCE) contain the earliest written astronomical records in China — solar and lunar eclipse observations, records of new moons, and the sexagenary cycle. The Shi Jing (Book of Odes, c. 1000 BCE) references stars as seasonal markers for agriculture. The Han Dynasty astronomer Zhang Heng (78–139 CE) built the first seismoscope and an armillary sphere driven by a water-clock. Chinese astronomers recorded supernovae that modern astronomers identify as known remnants — the Crab Nebula (SN 1054 CE) was observed as a "guest star" visible in daylight for 23 days.'
+      lore: 'The oracle bones of the Shang Dynasty (c. 1200 BC) contain the earliest written astronomical records in China — solar and lunar eclipse observations, records of new moons, and the sexagenary cycle. The Shi Jing (Book of Odes, c. 1000 BC) references stars as seasonal markers for agriculture. The Han Dynasty astronomer Zhang Heng (78–139 AD) built the first seismoscope and an armillary sphere driven by a water-clock. Chinese astronomers recorded supernovae that modern astronomers identify as known remnants — the Crab Nebula (SN 1054 AD) was observed as a "guest star" visible in daylight for 23 days.'
     }
   }
 };
@@ -1565,22 +1565,22 @@ const CIVS = {
    Maps each civilization key to its historically active epoch range.
    ============================================================ */
 const CIV_TIMELINES = {
-  vedic:   { min: -10000, max: 2026, step: 25, label: 'Vedic Indians (10,000 BCE – Present)' },
-  egypt:   { min: -8000,  max: 600,  step: 25, label: 'Ancient Egyptians (8000 BCE – 600 CE)' },
-  sangam:  { min: -2300,  max: 2026, step: 10, label: 'Sangam Indians (2300 BCE – Present)' },
-  greece:  { min: -1200,  max: 400,  step: 5,  label: 'Ancient Greeks (1200 BCE – 400 CE)' },
-  maya:    { min: -2000,  max: 1600, step: 10, label: 'Maya Civilization (2000 BCE – 1600 CE)' },
-  aztec:   { min: 1100,   max: 1521, step: 1,  label: 'Aztec Empire (1100 CE – 1521 CE)' },
-  inca:    { min: 1200,   max: 1572, step: 1,  label: 'Inca Empire (1200 CE – 1572 CE)' },
-  china:   { min: -1600,  max: 1912, step: 10, label: 'Imperial China (1600 BCE – 1912 CE)' },
-  babylon: { min: -2500,  max: 539,  step: 10, label: 'Babylonia (2500 BCE – 539 BCE)' }
+  egypt:   { min: -10000, max: -1000, step: 1, label: 'Ancient Egyptians (10,000 BC – 1000 BC)' },
+  vedic:   { min: -5000,  max: -1500, step: 1, label: 'Vedic Indians (5000 BC – 1500 BC)' },
+  sangam:  { min: -3500,  max: 1,     step: 1, label: 'Sangam Indians (3500 BC – 1 AD)' },
+  babylon: { min: -4000,  max: -2000, step: 1, label: 'Babylonia (4000 BC – 2000 BC)' },
+  china:   { min: -3000,  max: 1000,  step: 1, label: 'Imperial China (3000 BC – 1000 AD)' },
+  greece:  { min: -1000,  max: 1,     step: 1, label: 'Ancient Greeks (1000 BC – 1 AD)' },
+  aztec:   { min: 1,      max: 1500,  step: 1, label: 'Aztec Empire (1 AD – 1500 AD)' },
+  maya:    { min: -2000,  max: 1500,  step: 1, label: 'Maya Civilization (2000 BC – 1500 AD)' },
+  inca:    { min: 1200,   max: 1533,  step: 1, label: 'Inca Empire (1200 AD – 1533 AD)' }
 };
 
 
 /* ============================================================
    PRECESSION ALGORITHM
    Approximate axial precession: ~1° per 71.6 years (26,000 year cycle)
-   We shift star coordinates based on years from J2000.0 (year 2000 CE)
+   We shift star coordinates based on years from J2000.0 (year 2000 AD)
    ============================================================ */
 function precess(ra, dec, yearCE) {
   const T = (yearCE - 2000) / 100; // Julian centuries from J2000
@@ -1827,7 +1827,7 @@ epochSlider.addEventListener('input', e => {
 });
 
 function formatEpochYear(yr) {
-  return yr < 0 ? `${Math.abs(yr)} BCE` : (yr === 0 ? '1 CE' : `${yr} CE`);
+  return yr < 0 ? `${Math.abs(yr)} BC` : (yr === 0 ? '1 AD' : `${yr} AD`);
 }
 
 function updateEpochDisplay() {
@@ -1850,15 +1850,12 @@ function loadCivilization(civKey) {
   const civ = CIVS[civKey];
   const timeline = CIV_TIMELINES[civKey] || { min: -10000, max: 2026 };
 
-  // Snap epoch slider to civilization's boundaries
+  // Snap epoch slider to civilization's boundaries and start at its beginning
   epochSlider.min = timeline.min;
   epochSlider.max = timeline.max;
   epochSlider.step = timeline.step || 1;
-  // Clamp current year to new range
-  if (state.epochYear < timeline.min) state.epochYear = timeline.min;
-  if (state.epochYear > timeline.max) state.epochYear = timeline.max;
+  state.epochYear = timeline.min;
   epochSlider.value = state.epochYear;
-  // Re-sync state with the browser's step-grid snapping
   state.epochYear = parseInt(epochSlider.value, 10);
   updateEpochDisplay();
 
@@ -2036,7 +2033,7 @@ function openStarModal(star) {
 
   const yearCE = state.epochYear;
   const p = precess(sRa0, sDec0, yearCE);
-  const epochLabel = yearCE < 0 ? `${Math.abs(yearCE)} BCE` : `${yearCE} CE`;
+  const epochLabel = yearCE < 0 ? `${Math.abs(yearCE)} BC` : `${yearCE} AD`;
   const raHMS = decimalRaToHMS(p.ra);
   const decDMS = decimalDecToDMS(p.dec);
 
