@@ -1565,15 +1565,15 @@ const CIVS = {
    Maps each civilization key to its historically active epoch range.
    ============================================================ */
 const CIV_TIMELINES = {
-  vedic:   { min: -10000, max: 2026, label: 'Vedic Indians (10,000 BCE – Present)' },
-  egypt:   { min: -8000,  max: 600,  label: 'Ancient Egyptians (8000 BCE – 600 CE)' },
-  sangam:  { min: -2300,  max: 2026, label: 'Sangam Indians (2300 BCE – Present)' },
-  greece:  { min: -1200,  max: 400,  label: 'Ancient Greeks (1200 BCE – 400 CE)' },
-  maya:    { min: -2000,  max: 1600, label: 'Maya Civilization (2000 BCE – 1600 CE)' },
-  aztec:   { min: 1100,   max: 1521, label: 'Aztec Empire (1100 CE – 1521 CE)' },
-  inca:    { min: 1200,   max: 1572, label: 'Inca Empire (1200 CE – 1572 CE)' },
-  china:   { min: -1600,  max: 1912, label: 'Imperial China (1600 BCE – 1912 CE)' },
-  babylon: { min: -2500,  max: 539,  label: 'Babylonia (2500 BCE – 539 BCE)' }
+  vedic:   { min: -10000, max: 2026, step: 25, label: 'Vedic Indians (10,000 BCE – Present)' },
+  egypt:   { min: -8000,  max: 600,  step: 25, label: 'Ancient Egyptians (8000 BCE – 600 CE)' },
+  sangam:  { min: -2300,  max: 2026, step: 10, label: 'Sangam Indians (2300 BCE – Present)' },
+  greece:  { min: -1200,  max: 400,  step: 5,  label: 'Ancient Greeks (1200 BCE – 400 CE)' },
+  maya:    { min: -2000,  max: 1600, step: 10, label: 'Maya Civilization (2000 BCE – 1600 CE)' },
+  aztec:   { min: 1100,   max: 1521, step: 1,  label: 'Aztec Empire (1100 CE – 1521 CE)' },
+  inca:    { min: 1200,   max: 1572, step: 1,  label: 'Inca Empire (1200 CE – 1572 CE)' },
+  china:   { min: -1600,  max: 1912, step: 10, label: 'Imperial China (1600 BCE – 1912 CE)' },
+  babylon: { min: -2500,  max: 539,  step: 10, label: 'Babylonia (2500 BCE – 539 BCE)' }
 };
 
 
@@ -1826,10 +1826,12 @@ epochSlider.addEventListener('input', e => {
   drawStarmap();
 });
 
+function formatEpochYear(yr) {
+  return yr < 0 ? `${Math.abs(yr)} BCE` : (yr === 0 ? '1 CE' : `${yr} CE`);
+}
+
 function updateEpochDisplay() {
-  const yr = state.epochYear;
-  const label = yr < 0 ? `${Math.abs(yr)} BCE` : (yr === 0 ? '1 CE' : `${yr} CE`);
-  epochDisplay.textContent = label;
+  epochDisplay.textContent = formatEpochYear(state.epochYear);
 }
 
 /* ============================================================
@@ -1851,11 +1853,22 @@ function loadCivilization(civKey) {
   // Snap epoch slider to civilization's boundaries
   epochSlider.min = timeline.min;
   epochSlider.max = timeline.max;
+  epochSlider.step = timeline.step || 1;
   // Clamp current year to new range
   if (state.epochYear < timeline.min) state.epochYear = timeline.min;
   if (state.epochYear > timeline.max) state.epochYear = timeline.max;
   epochSlider.value = state.epochYear;
+  // Re-sync state with the browser's step-grid snapping
+  state.epochYear = parseInt(epochSlider.value, 10);
   updateEpochDisplay();
+
+  // Update visible slider range labels
+  const minLabel = $('slider-min-label');
+  const maxLabel = $('slider-max-label');
+  const headerRange = $('epoch-range-label');
+  if (minLabel) minLabel.textContent = formatEpochYear(timeline.min);
+  if (maxLabel) maxLabel.textContent = formatEpochYear(timeline.max);
+  if (headerRange) headerRange.textContent = `${formatEpochYear(timeline.min)} – ${formatEpochYear(timeline.max)}`;
 
   // Update slider label if element exists
   const sliderLabel = document.getElementById('timeline-label');
