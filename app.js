@@ -1567,13 +1567,13 @@ const CIVS = {
 const CIV_TIMELINES = {
   egypt:   { min: -6000,  max: -1000, step: 1, label: 'Ancient Egyptians (6000 BC – 1000 BC)' },
   vedic:   { min: -7000,  max: -2000, step: 1, label: 'Vedic Indians (7000 BC – 2000 BC)' },
-  sangam:  { min: -2000,  max: -1000, step: 1, label: 'Sangam Indians (2000 BC – 1000 BC)' },
+  sangam:  { min: -300,   max: 300,   step: 1, label: 'Sangam Indians (300 BC – 300 AD)' },
   babylon: { min: -4000,  max: -2000, step: 1, label: 'Babylonia (4000 BC – 2000 BC)' },
   china:   { min: -3000,  max: 1000,  step: 1, label: 'Imperial China (3000 BC – 1000 AD)' },
   greece:  { min: -1000,  max: 1,     step: 1, label: 'Ancient Greeks (1000 BC – 1 AD)' },
-  aztec:   { min: 1300,   max: 1521,  step: 1, label: 'Aztec Empire (1300 AD – 1521 AD)' },
+  aztec:   { min: 1300,   max: 1500,  step: 1, label: 'Aztec Empire (1300 AD – 1500 AD)' },
   maya:    { min: -2000,  max: 1500,  step: 1, label: 'Maya Civilization (2000 BC – 1500 AD)' },
-  inca:    { min: 1200,   max: 1533,  step: 1, label: 'Inca Empire (1200 AD – 1533 AD)' }
+  inca:    { min: 1200,   max: 1500,  step: 1, label: 'Inca Empire (1200 AD – 1500 AD)' }
 };
 
 
