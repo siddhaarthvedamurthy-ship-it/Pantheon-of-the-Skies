@@ -14,33 +14,25 @@ const CIVS = {
     name: 'Vedic India',
     themeClass: 'theme-vedic',
     accent: '#E8A838',
-    bgImage: 'Brahman.png',
+    bgImage: '',
+
     deities: [
       {
-        id: 'brahman',
-        name: 'Brahman',
-        role: 'The Absolute — Formless Ultimate Reality',
-        domains: ['Cosmos','Eternal','Upanishadic'],
-        img: 'Brahman.png',
-        myth: 'Brahman is the singular, infinite, changeless ground of all existence described in the Upanishads. Neither creator nor created, Brahman is Satyam (Truth), Jnanam (Consciousness), Anantam (Infinity). The Taittiriya Upanishad declares: "Satyam Jnanam Anantam Brahma." All gods, all matter, all souls are expressions of this one undivided reality. The Chandogya Upanishad affirms "Aham Brahmasmi" — I am Brahman — as the supreme mahavakya.',
-        stats: { nature: 'Nirguna (Formless)', texts: 'Upanishads, Vedas', era: '1500–500 BCE', counterpart: 'Atman (Self)' }
-      },
-      {
-        id: 'brahma',
-        name: 'Brahma',
-        role: 'Prajapati — Lord of Progeny, Creator',
-        domains: ['Creation','Time','Knowledge'],
-        img: 'Brahma.png',
-        myth: 'Brahma is the Puranic caricature of the ultimate reality Brahman. The Puranas are relatively new hindu texts that are often sectatarian and political. The Puranas, wanting to promote their god above the Upanishadic Brahman, used a four-headed old man Brahma to bully him so that people will stop worshipping him! This was quite normal in the History of Hinduism.',
-        stats: { vehicle: 'Hamsa (Swan)', consort: 'Sarasvati', weapon: 'Brahmastra', lifespan: '311.04 Trillion years' }
+        id: 'surya',
+        name: 'Surya',
+        role: 'The Sun — Eye of the Gods, First of the Adityas',
+        domains: ['Sun','Light','Time','Vision','Health'],
+        img: '',
+        myth: 'Surya is the living sun himself — the eye of the gods (Chaksus) who rides a chariot drawn by seven horses, the seven metres of the Rigveda, driven by his charioteer Aruna, the red glow of dawn. Nothing in heaven or earth can hide from his gaze: he watches every deed of mortal and god alike. The Gayatri mantra (Rigveda III.62.10) begs his light to illumine the mind, and the Surya Sukta (Rigveda I.50) hails him as the dispenser of life, health and immortality. He is the father of Yama (death), Yami and the twin physicians, the Ashvins. He is the first of the six Adityas — the bright sons of Aditi, born of the line of Daksha — followed by Indra, Agni, Varuna, Vayu and Soma.',
+        stats: { vehicle: 'Seven-horse chariot driven by Aruna', consort: 'Sanjna, daughter of Vishvakarma', children: 'Yama, Yami, the Ashvins, Manu', key_text: 'Rigveda I.50 (Surya Sukta)' }
       },
       {
         id: 'indra',
         name: 'Indra',
         role: 'Shakra — King of the Devas, God of Thunder',
         domains: ['Storm','Lightning','War','Heaven'],
-        img: 'Indra_2.png',
-        myth: 'Indra is the mightiest Rigvedic deity — nearly 250 hymns extol him. He wields the Vajra (thunderbolt) forged from sage Dadhichi\'s bones to slay the cosmic serpent Vritra and release the celestial waters. He rides the white elephant Airavata and governs Svarga (heaven). Master of the monsoon, he is both feared and beloved. His Soma drinking is legendary, fuelling his cosmic battles.',
+        img: '',
+        myth: 'Indra is the mightiest Rigvedic deity — nearly 250 hymns extol him. He wields the Vajra (thunderbolt) forged from sage Dadhichi\'s bones to slay the cosmic serpent Vritra and release the celestial waters. He rides the white elephant Airavata and governs Svarga (heaven). Master of the monsoon, he is both feared and beloved. His Soma drinking is legendary, fuelling his cosmic battles. He is one of the six Adityas, the bright sons of Aditi of the line of Daksha.',
         stats: { vehicle: 'Airavata (white elephant)', weapon: 'Vajra (thunderbolt)', realm: 'Svarga (3rd Heaven)', vedic_hymns: '~250 hymns in Rigveda' }
       },
       {
@@ -48,26 +40,17 @@ const CIVS = {
         name: 'Agni',
         role: 'The Sacred Fire — Messenger of Gods and Men',
         domains: ['Fire','Sacrifice','Purification','Home'],
-        img: 'Agni.png',
-        myth: 'Agni is the eternal intermediary between mortal and divine. Born two-headed — he is present in every sacred hearth, every yagna (ritual fire). The Rigveda opens with "Agnim ile purohitam" — I praise Agni the priest. He carries sacrificial offerings to the gods on fragrant smoke, is the witness of marriages, and purifies the dead. He rides a ram and wears a crown of flames.',
+        img: '',
+        myth: 'Agni is the eternal intermediary between mortal and divine. Born two-headed — he is present in every sacred hearth, every yagna (ritual fire). The Rigveda opens with "Agnim ile purohitam" — I praise Agni the priest. He carries sacrificial offerings to the gods on fragrant smoke, is the witness of marriages, and purifies the dead. He rides a ram and wears a crown of flames. He is one of the six Adityas, the bright sons of Aditi of the line of Daksha.',
         stats: { vehicle: 'Ram (Mesha)', faces: 'Two Heads', realm: 'All three worlds', rigveda_hymns: '~200+ hymns' }
-      },
-      {
-        id: 'daksha',
-        name: 'Daksha',
-        role: 'Prajapati Daksha — Progenitor of Creation',
-        domains: ['Progeny','Order','Sacrifice'],
-        img: 'Daksha.png',
-        myth: 'Daksha is the great Prajapati (Lord of Progeny), son of Brahma, progenitor of the cosmos. In the Rigveda, he is used interchangeably with Dyaus, Aditi, and Purusha in a celebrated cosmic paradox — Daksha is born from Aditi, yet Aditi is born from Daksha. He fathered many sons in the Vedas along with Aditi, the Adityas. His role in the Puranas was distorted by sectarian redactors; in the oldest texts he is among the most exalted of all progenitors, second only to Brahma himself. When used interchangeably with Purusha or the Upanishadic Prana, he is treated sometimes as the life-force of the Universe, surpassing his father in importance, since the mind is nothing without life.',
-        stats: { sons: 'Surya, Indra, Agni, Varuna, Vayu, Chandra', father: 'Brahma', fate: 'Removed from the yagna by Virabhadra\'s forces for insulting Sati', restoration: 'Restored to full life and dignity after acknowledging the cosmic order' }
       },
       {
         id: 'varuna',
         name: 'Varuna',
         role: 'Lord of Cosmic Order — Guardian of Rta',
         domains: ['Ocean','Cosmic Law','Night Sky','Oath'],
-        img: 'Varuna.png',
-        myth: 'Varuna is the all-seeing sovereign of Rta — the cosmic moral order that holds the universe together. He rides the makara (sea-dragon) across primordial waters, binds sinners with his noose (Pasha), and releases the repentant. His thousand eyes are the stars. In Vedic cosmology he governs the night sky and the western quarter. He is the guardian of oaths and the punisher of falsehood. Later he became the lord of all waters.',
+        img: '',
+        myth: 'Varuna is the all-seeing sovereign of Rta — the cosmic moral order that holds the universe together. He rides the makara (sea-dragon) across primordial waters, binds sinners with his noose (Pasha), and releases the repentant. His thousand eyes are the stars. In Vedic cosmology he governs the night sky and the western quarter. He is the guardian of oaths and the punisher of falsehood. Later he became the lord of all waters. He is one of the six Adityas, the bright sons of Aditi of the line of Daksha.',
         stats: { vehicle: 'Makara (sea-dragon)', weapon: 'Pasha (cosmic noose)', domain: 'Rta, cosmic waters', eyes: '1000 (the stars)' }
       },
       {
@@ -75,8 +58,8 @@ const CIVS = {
         name: 'Vayu',
         role: 'God of Wind — Breath of the Cosmos',
         domains: ['Wind','Breath','Speed','Vital Force'],
-        img: 'Vayu.png',
-        myth: 'Vayu is the life-breath of the cosmos — the first to drink Soma at dawn before the gods. He is the father of Hanuman and the Pandava hero Bhima. His vehicle is the mriga (antelope), symbol of fleet-footed wind. As Prana (vital breath), he sustains all life within every living being. The Atharvaveda hails Vayu as the breath of the cosmic Purusha. He governs the northwest direction and commands the maruts (storm troops).',
+        img: '',
+        myth: 'Vayu is the life-breath of the cosmos — the first to drink Soma at dawn before the gods. He is the father of Hanuman and the Pandava hero Bhima. His vehicle is the mriga (antelope), symbol of fleet-footed wind. As Prana (vital breath), he sustains all life within every living being. The Atharvaveda hails Vayu as the breath of the cosmic Purusha. He governs the northwest direction and commands the maruts (storm troops). He is one of the six Adityas, the bright sons of Aditi of the line of Daksha.',
         stats: { vehicle: 'Mriga (antelope/deer)', sons: 'Hanuman, Bhima', direction: 'Northwest (Vayavya)', form: 'Prana in all beings' }
       },
       {
@@ -84,30 +67,11 @@ const CIVS = {
         name: 'Soma',
         role: 'Moon God — Lord of the Sacred Drink',
         domains: ['Moon','Ritual Drink','Plants','Mind'],
-        img: 'Soma.png',
-        myth: 'Soma is simultaneously the moon deity and the sacred ritual drink pressed from a mountain plant. The ninth mandala of the Rigveda (Soma Mandala) contains 114 hymns entirely dedicated to Soma Pavamana. He is the king of plants and the Brahmins\' patron. The moon waxes as the gods drink Soma, wanes as mortals partake. He rules the mind (manas), dew, and healing. His silver radiance inspired the Vedic concept of immortal nectar — amrita.',
+        img: '',
+        myth: 'Soma is simultaneously the moon deity and the sacred ritual drink pressed from a mountain plant. The ninth mandala of the Rigveda (Soma Mandala) contains 114 hymns entirely dedicated to Soma Pavamana. He is the king of plants and the Brahmins\' patron. The moon waxes as the gods drink Soma, wanes as mortals partake. He rules the mind (manas), dew, and healing. His silver radiance inspired the Vedic concept of immortal nectar — amrita. He is one of the six Adityas, the bright sons of Aditi of the line of Daksha.',
         stats: { vehicle: 'Silver chariot (drawn by white horses)', realm: 'Chandraloka (Moon realm)', drink: 'Psychoactive ritual soma', texts: 'Entire Rigveda Mandala IX' }
-      },
-      {
-        id: 'yama',
-        name: 'Yama & Yami',
-        role: 'Lord of Death and the Twin of Time',
-        domains: ['Death','Dharma','Justice','Time'],
-        img: 'Yama-Yami_2.png',
-        myth: 'Yama was the first mortal to die and thus became king of the dead and judge of souls. His twin sister Yami (the river Yamuna) embodies the complementary feminine principle. Yama rides a black buffalo, wields his staff (danda) and noose, and is attended by two four-eyed dogs who guard the path to his realm. The Katha Upanishad is entirely a dialogue between the youth Nachiketa and Yama, in which Yama reveals the secrets of death and the immortal Atman. Yama was incredibly handsome in the Vedas, but was made to look ugly in the Puranas.',
-        stats: { vehicle: 'Black buffalo (Mahisha)', weapon: 'Danda (staff) + Pasha', realm: 'Yamaloka / Naraka', twin: 'Yami (river Yamuna)' }
-      },
-      {
-        id: 'prana',
-        name: 'Prana',
-        role: 'The Life-Breath — Cosmic Vital Force',
-        domains: ['Breath','Life','Five Vayus','Consciousness'],
-        img: 'Prana.png',
-        myth: 'Prana is the universal life-force that animates all existence. He is used interchangably with Purusha, Dyaus and even Daksha in a few older texts, with the three and many more gods being his forms. He is sometimes considered to be the son of Brahman and Vac, sometimes the supreme king, so on. The Chandogya Upanishad declares "Prana evaidam sarvam" — Prana alone is all this. It manifests in five forms in the body: Prana (inhalation), Apana (exhalation/downward), Samana (digestion), Vyana (circulation), and Udana (upward/transcendence). The Brihadaranyaka Upanishad calls Prana "the oldest and the best." Control of Prana through pranayama leads to mastery of mind and liberation.',
-        stats: { five_forms: 'Prana, Apana, Samana, Vyana, Udana', texts: 'Prashna, Chandogya, Brihadaranyaka Upanishads', cosmic_role: 'Sustainer of all life', yogic_path: 'Pranayama → liberation' }
       }
-    ],
-    stars: [
+    ],    stars: [
   { name: 'Ashwini', modern: 'Alpha Arietis (Hamal)', ra0: 31.792, dec0: 23.462, mag: 2.01, color: '#FFC080', myth: 'Represents cosmic life-force, swift healing, and the dawn of creation. The twins travel in a golden chariot bringing rejuvenation to the cosmos.', mass: '1.5 M☉', distance: '65.8 ly', radius: '14.9 R☉' },
   { name: 'Bharani', modern: '41 Arietis', ra0: 42.496, dec0: 27.261, mag: 3.61, color: '#FFA060', myth: 'The cosmic portal of birth, death, and transformation. It controls the transition of souls and the strict laws of karma.', mass: '2.6 M☉', distance: '166 ly', radius: '2.1 R☉' },
   { name: 'Krittika', modern: 'Eta Tauri (Alcyone / Pleiades)', ra0: 56.871, dec0: 24.105, mag: 2.85, color: '#A0C8FF', myth: 'The intense fire that purifies raw elements. Mythologically known as the foster mothers of the war god Kartikeya, representing protective fury.', mass: '6.0 M☉', distance: '440 ly', radius: '10.0 R☉' },
@@ -162,7 +126,7 @@ const CIVS = {
         { name: 'Mahayuga (4 Yugas)', val: '4,320,000 years' },
         { name: 'Kalpa (Brahma\'s Day)', val: '4,320,000,000 years' }
       ],
-      lore: 'The Rigveda\'s Nasadiya Sukta (10.129) begins with the primordial void: "Neither existence nor non-existence was there." The Vedic rishis observed the heliacal risings of nakshatras to fix the timing of yajnas. The Vedanga Jyotisha (c. 1200 BCE) is the first astronomical treatise, tracking the sun and moon through nakshatras. The 19-year Metonic cycle was known as the Sapta-panchashika (5-year yuga) multiplied by ~4.'
+      lore: 'The Rigveda\'s Nasadiya Sukta (10.129) begins with the primordial void: "Neither existence nor non-existence was there." The Vedic rishis observed the heliacal risings of nakshatras to fix the timing of yajnas. The Vedanga Jyotisha (c. 1200 BC) is the first astronomical treatise, tracking the sun and moon through nakshatras. The 19-year Metonic cycle was known as the Sapta-panchashika (5-year yuga) multiplied by ~4.'
     }
   },
 
@@ -170,14 +134,24 @@ const CIVS = {
     name: 'Ancient Egypt',
     themeClass: 'theme-egypt',
     accent: '#1D4FA3',
-    bgImage: 'ChatGPT_Image_May_22__2026__12_39_24_AM.png',
+    bgImage: '',
+
     deities: [
+      {
+        id: 'apophis',
+        name: 'Apophis (Apep)',
+        role: 'The Chaos Serpent — Enemy of the Sun',
+        domains: ['Chaos','Darkness','Destruction','Eclipse'],
+        img: '',
+        myth: 'Apophis is the great serpent of unmaking, born of the primeval darkness of Nun — never worshipped, only warded against. Every night, as Ra\'s barque sails the twelve hours of the Duat, Apophis lies coiled in wait, his gaze petrifying, his voice a hiss that shatters stone. Were he ever to swallow the barque, dawn would fail — an eclipse, then eternal night. Priests burned wax effigies of him daily, and the Book of Overthrowing Apep was recited in the temples to arm the gods who fought him. Yet he can never be destroyed, only defeated: chaos is repelled each night and rises again, for without Apophis there would be no dawn to win.',
+        stats: { form: 'Giant serpent of primeval darkness', realm: 'The Duat — the twelve hours of night', enemy: 'Ra and his barque of a million years', fate: 'Defeated every dawn, never destroyed' }
+      },
       {
         id: 'ra',
         name: 'Ra / Ra-Horakhty',
         role: 'The Sun God — King of All Gods',
         domains: ['Sun','Creation','Kingship','Day'],
-        img: 'ChatGPT_Image_May_22__2026__12_28_20_AM.png',
+        img: '',
         myth: 'Ra, the supreme solar deity, sails across the sky in his celestial barque by day and battles the serpent Apophis in the underworld each night. At dawn he emerges as Khepri (scarab), at noon he is Ra in full power, at sunset Atum. Every pharaoh was his son. Ra absorbed other deities — becoming Amun-Ra, Ra-Horakhty (Horus of the Horizon). The Pyramid Texts record his nightly journey through the twelve hours of the Duat.',
         stats: { forms: 'Ra, Khepri (dawn), Atum (dusk)', crown: 'Solar disk + cobra uraeus', barque: 'Mandjet (day), Mesektet (night)', texts: 'Pyramid Texts, Book of the Dead' }
       },
@@ -186,89 +160,65 @@ const CIVS = {
         name: 'Osiris',
         role: 'Lord of the Afterlife — God of Resurrection',
         domains: ['Death','Resurrection','Nile Flood','Agriculture'],
-        img: 'ChatGPT_Image_May_22__2026__12_31_13_AM.png',
+        img: '',
         myth: 'Osiris was the first divine king of Egypt, murdered by his brother Set who dismembered his body and scattered the 14 pieces across Egypt. Isis, his devoted sister-wife, reassembled him and breathed life back into him long enough to conceive Horus. Osiris rules the Duat (underworld) where he weighs hearts on the scales of Ma\'at against the feather of truth. His green skin symbolises resurrection, vegetation, and the Nile\'s fertile silt.',
         stats: { skin: 'Green (resurrection/vegetation)', symbols: 'Crook + Flail, white mummy wrappings', consort: 'Isis', son: 'Horus' }
+      },
+      {
+        id: 'set',
+        name: 'Set (Seth)',
+        role: 'Lord of Storms, Desert and Disorder',
+        domains: ['Storms','Desert','Violence','Foreign Lands'],
+        img: '',
+        myth: 'Set is the red lord of the desert wastes, of storms and of everything that breaks order — the murderer of his brother Osiris and the rival of Horus in the eighty-year Contendings before the tribunal of the Ennead. Yet Set is no simple devil: each night he stands at the prow of Ra\'s solar barque, hurling his harpoon to hold back Apophis — the only god strong enough to subdue the chaos serpent. Pharaohs such as Seti bore his name; he defends the sun even as he menaces it. His cult centres were Nubt (Ombos) and Avaris, and his sacred animal — the enigmatic Set-beast — belongs to no known species.',
+        stats: { animal: 'The Set-animal (sha), species unknown', weapon: 'Was-sceptre of power', cult_centres: 'Nubt (Ombos), Avaris', deeds: 'Slew Osiris; defends Ra against Apophis' }
       },
       {
         id: 'horus',
         name: 'Horus',
         role: 'Sky God — Divine Falcon, Patron of Pharaohs',
         domains: ['Sky','Kingship','War','Protection'],
-        img: 'ChatGPT_Image_May_22__2026__12_24_12_AM.png',
+        img: '',
         myth: 'Horus, the falcon-headed sky god, avenged his father Osiris in the great battle against Set. His right eye is the sun, his left eye the moon — lost and restored by Thoth, it became the Wedjat (Eye of Horus), the most powerful protective amulet in Egypt. Every living pharaoh was Horus incarnate. The Contendings of Horus and Set describes their epic 80-year struggle before the tribunal of the Ennead declared Horus the rightful king.',
         stats: { head: 'Peregrine Falcon', eyes: 'Right = Sun, Left = Moon', mother: 'Isis', father: 'Osiris' }
-      },
-      {
-        id: 'thoth',
-        name: 'Thoth',
-        role: 'God of Wisdom — Scribe of the Gods',
-        domains: ['Writing','Moon','Magic','Science','Law'],
-        img: 'ChatGPT_Image_May_22__2026__12_31_29_AM.png',
-        myth: 'Thoth, the ibis-headed or baboon-faced god of writing and wisdom, invented hieroglyphs, recorded the verdict of the dead\'s heart-weighing, and reconciled the lunar calendar\'s deficit to match the solar year by gambling with the Moon for 5 extra days (the Epagomenal Days). He is the author of the 42 Books of Thoth, attributed with all knowledge. Hermes Trismegistus of the later Hermetic tradition is his Greek equivalent.',
-        stats: { head: 'Sacred Ibis or Baboon', consort: 'Ma\'at or Seshat', invention: 'Hieroglyphics, calendars, magic', greek_equiv: 'Hermes Trismegistus' }
-      },
-      {
-        id: 'isis',
-        name: 'Isis',
-        role: 'Goddess of Magic and Motherhood',
-        domains: ['Magic','Healing','Motherhood','Wind'],
-        img: '',
-        myth: 'Isis is the greatest magician of the Egyptian pantheon. She resurrected Osiris using her vast knowledge of magic, conceived Horus immaculately after his death, and protected the infant god from Set. She tricked Ra into revealing his secret name, gaining power over him. Her wings fan the winds of Egypt. Her cult spread throughout the Roman Empire — she was worshipped from Britain to Mesopotamia as Regina Caeli, Queen of Heaven.',
-        stats: { symbol: 'Throne hieroglyph on head', wings: 'Wingspan spans the sky', magic: 'Greatest magician in Egypt', cult: 'Spread throughout Rome' }
-      },
-      {
-        id: 'anubis',
-        name: 'Anubis',
-        role: 'Jackal God — Guardian of the Scales',
-        domains: ['Embalming','Death','Judgment','Protection'],
-        img: '',
-        myth: 'Anubis, the jackal-headed god, presides over mummification and the Hall of Two Truths where he weighs the heart of the deceased against Ma\'at\'s feather. He guides souls through the Duat and protects the sacred embalming rites. Once the principal funerary deity before Osiris rose to prominence, Anubis was demoted to guardian of the scales. His black color represents both the dark soil of the Nile\'s fertile banks and the blackened skin of mummified bodies.',
-        stats: { head: 'Jackal', color: 'Black (fertility + mummification)', role: 'Embalmer of Osiris', weighing: 'Heart vs Feather of Ma\'at' }
       }
-    ],
-    stars: [
-  // PATH OF ENLIL (12 stars)
-  { name: 'Kakkab APIN (The Plough)', modern: 'Alpha Andromedae (Alpheratz)', ra0: 2.096, dec0: 29.091, mag: 2.06, color: '#FFC890', myth: 'Used to time the absolute beginning of field plowing and spring agricultural preparation.', mass: '3.8 M☉', distance: '97 ly', radius: '2.7 R☉' },
-  { name: 'Kakkab SHU.GI (The Old Man)', modern: 'Zeta Persei', ra0: 58.529, dec0: 31.884, mag: 2.85, color: '#FFA870', myth: 'Represented ancestral lineage, final harvest conclusions, and transition into the dry months.', mass: '19.0 M☉', distance: '750 ly', radius: '21.0 R☉' },
-  { name: 'Kakkab GAM (The Crook)', modern: 'Alpha Aurigae (Capella)', ra0: 79.171, dec0: 45.998, mag: 0.08, color: '#FFE0A0', myth: 'Represented the sacred crook or weapon used by the creator god to control the flock of stars.', mass: '2.56 M☉', distance: '42.8 ly', radius: '11.98 R☉' },
-  { name: 'Kakkab MAŠ.TAB.BA.GAL.GAL (Great Twins)', modern: 'Beta Geminorum (Pollux)', ra0: 116.329, dec0: 28.026, mag: 1.14, color: '#FFD090', myth: 'The underworld guardian twins who stood watch at the northern gate of heaven to stop chaos.', mass: '1.91 M☉', distance: '33.7 ly', radius: '8.8 R☉' },
-  { name: 'Kakkab AL.LUL (The Crab)', modern: 'Acubens (Alpha Cancri)', ra0: 134.621, dec0: 11.858, mag: 4.26, color: '#FFC880', myth: 'Recognised as the celestial seat of the high sky god Anu during midsummer elevations.', mass: '2.1 M☉', distance: '174 ly', radius: '4.5 R☉' },
-  { name: 'Kakkab UR.GU.LA (The Lion\'s Head)', modern: 'Epsilon Leonis', ra0: 146.463, dec0: 23.774, mag: 2.98, color: '#FFB880', myth: 'Signalled the peak dry summer heat and opened the warfare and royal hunting windows.', mass: '4.0 M☉', distance: '247 ly', radius: '21.0 R☉' },
-  { name: 'Kakkab SHU.PA (The Staff)', modern: 'Alpha Boötis (Arcturus)', ra0: 213.913, dec0: 19.182, mag: -0.05, color: '#FFB060', myth: 'Viewed as the vertical axis or support pillar holding up the crown of the northern hemisphere.', mass: '1.08 M☉', distance: '36.7 ly', radius: '25.4 R☉' },
-  { name: 'Kakkab BAL-UR-A (The Jewel)', modern: 'Alpha Coronae Borealis', ra0: 233.671, dec0: 26.715, mag: 2.22, color: '#FFD8A0', myth: 'Symbolised the divine jewelled head-dress dropped into the sky by the primordial mother goddess.', mass: '2.58 M☉', distance: '75 ly', radius: '3.0 R☉' },
-  { name: 'Kakkab MAR.GID.DA (The Wagon)', modern: 'Alpha Ursae Majoris (Dubhe)', ra0: 165.933, dec0: 61.751, mag: 1.79, color: '#FFE0C0', myth: 'The northern wagon whose unblinking circumpolar rotation tracked the nightly hours.', mass: '4.25 M☉', distance: '123 ly', radius: '30.0 R☉' },
-  { name: 'Kakkab TIE (The Raven)', modern: 'Zeta Ursae Majoris (Mizar)', ra0: 200.979, dec0: 54.925, mag: 2.23, color: '#FFD0A0', myth: 'Governed by the god of plagues and deep conflict, marking ominous winter sky transitions.', mass: '2.2 M☉', distance: '82.9 ly', radius: '2.4 R☉' },
-  { name: 'Kakkab UZ (The She-Goat)', modern: 'Alpha Lyrae (Vega)', ra0: 279.233, dec0: 38.784, mag: 0.03, color: '#C0D8FF', myth: 'Associated with the ultimate goddess of healing, dispensing medicines from the sky vault.', mass: '2.13 M☉', distance: '25 ly', radius: '2.36 R☉' },
-  { name: 'Kakkab KU (The Great Fish)', modern: 'Beta Andromedae (Mirach)', ra0: 17.433, dec0: 35.621, mag: 2.07, color: '#FFC890', myth: 'Guarded the northern horizon interface, helping to manage late-winter astronomical cycles.', mass: '2.49 M☉', distance: '197 ly', radius: '86.0 R☉' },
-
-  // PATH OF ANU (12 stars)
-  { name: 'Kakkab LU.HUN.GA (The Hired Man)', modern: 'Alpha Arietis (Hamal)', ra0: 31.792, dec0: 23.462, mag: 2.01, color: '#FFC080', myth: 'Represented the resurrected shepherd god, pinning the location of the early spring equinox.', mass: '1.5 M☉', distance: '65.8 ly', radius: '14.9 R☉' },
-  { name: 'Kakkab MUL.MUL (The Bristle)', modern: 'Eta Tauri (Alcyone)', ra0: 56.871, dec0: 24.105, mag: 2.85, color: '#A0C8FF', myth: 'The foundational anchor group of the zodiac, tracking high-importance royal omens.', mass: '6.0 M☉', distance: '440 ly', radius: '10.0 R☉' },
-  { name: 'Kakkab GUD.AN.NA (Bull of Heaven)', modern: 'Alpha Tauri (Aldebaran)', ra0: 68.979, dec0: 16.509, mag: 0.85, color: '#FF8040', myth: 'Represented the fierce bull sent to fight Gilgamesh, marking late spring sky transitions.', mass: '1.16 M☉', distance: '65.3 ly', radius: '44.1 R☉' },
-  { name: 'Kakkab SIPA.ZI.AN.NA (True Shepherd)', modern: 'Alpha Orionis (Betelgeuse)', ra0: 88.792, dec0: 7.407, mag: 0.50, color: '#FF6040', myth: 'The cosmic messenger god who delivered decrees back and forth between heaven and earth.', mass: '16.5 M☉', distance: '642 ly', radius: '887 R☉' },
-  { name: 'Kakkab KAK.SI.SA (The Arrow)', modern: 'Alpha Canis Majoris (Sirius)', ra0: 101.288, dec0: -16.716, mag: -1.46, color: '#A0C8FF', myth: 'Pierced the heavy summer horizon to call down the seasonal rains and unlock the waterways.', mass: '2.06 M☉', distance: '8.6 ly', radius: '1.71 R☉' },
-  { name: 'Kakkab BAN (The Bow)', modern: 'Delta Canis Majoris (Wezen)', ra0: 107.096, dec0: -26.393, mag: 1.83, color: '#FFA860', myth: 'The divine weapon loaded with the cosmic arrow, aimed directly at sky monsters.', mass: '16.9 M☉', distance: '1600 ly', radius: '215 R☉' },
-  { name: 'Kakkab LUGAL (The King)', modern: 'Alpha Leonis (Regulus)', ra0: 152.092, dec0: 11.967, mag: 1.35, color: '#B0D0FF', myth: 'The core royal indicator star. It dictated court timelines and structural royal prophecies.', mass: '3.8 M☉', distance: '79.3 ly', radius: '3.0 R☉' },
-  { name: 'Kakkab AB.SIN (The Furrow)', modern: 'Alpha Virginis (Spica)', ra0: 201.300, dec0: -11.161, mag: 0.98, color: '#B0D4FF', myth: 'Symbolised grain fertility and agricultural wealth sown along the Mesopotamian canal beds.', mass: '11.43 M☉', distance: '250 ly', radius: '7.47 R☉' },
-  { name: 'Kakkab ZI.BA.AN.NA (The Scales)', modern: 'Alpha Librae (Zubenelgenubi)', ra0: 222.721, dec0: -16.042, mag: 2.75, color: '#FFC890', myth: 'The point of solar justice and equal measurement across day and night durations.', mass: '1.82 M☉', distance: '75.8 ly', radius: '2.4 R☉' },
-  { name: 'Kakkab GIR.TAB (The Scorpion)', modern: 'Alpha Scorpionis (Antares)', ra0: 247.350, dec0: -26.432, mag: 1.05, color: '#FF6040', myth: 'Guarded the entrance to the underworld and punished humans who broke sacred contracts.', mass: '11.2 M☉', distance: '550 ly', radius: '680 R☉' },
-  { name: 'Kakkab PA.BIL.SAG (The Defender)', modern: 'Sigma Sagittarii', ra0: 283.813, dec0: -26.297, mag: 2.05, color: '#FFB880', myth: 'The warrior aspect linked with deep winter defense and guarding celestial borders.', mass: '7.8 M☉', distance: '228 ly', radius: '4.5 R☉' },
-  { name: 'Kakkab IKU (The Field)', modern: 'Alpha Pegasi (Markab)', ra0: 346.192, dec0: 15.205, mag: 2.49, color: '#FFD0A0', myth: 'Represented the original square grid lines laid out by Ea during the architecture of creation.', mass: '3.5 M☉', distance: '140 ly', radius: '4.7 R☉' },
-
-  // PATH OF EA (12 stars)
-  { name: 'Kakkab IKUM (The Fish-Tail)', modern: 'Alpha Piscis Austrini (Fomalhaut)', ra0: 344.413, dec0: -29.622, mag: 1.16, color: '#C0E0FF', myth: 'Marked out the presence of marshlands and tracked the low southern horizon lines.', mass: '1.92 M☉', distance: '25.1 ly', radius: '1.84 R☉' },
-  { name: 'Kakkab SHULLAT (Cloud Herald)', modern: 'Alpha Centauri', ra0: 219.900, dec0: -60.834, mag: -0.27, color: '#FFE0A0', myth: 'The southern twin portents that predicted river changes and massive valley storms.', mass: '1.1 M☉', distance: '4.37 ly', radius: '1.22 R☉' },
-  { name: 'Kakkab Gula (The Sovereign)', modern: 'Alpha Aquarii (Sadalmelik)', ra0: 331.446, dec0: -0.320, mag: 2.95, color: '#B8D8FF', myth: 'Marked the deep cosmic ocean reservoirs feeding water down into the Euphrates.', mass: '5.1 M☉', distance: '520 ly', radius: '77.0 R☉' },
-  { name: 'Kakkab ALLUT (The Turtle)', modern: 'Alpha Canis Minoris (Procyon)', ra0: 114.825, dec0: 5.225, mag: 0.34, color: '#FFE0C0', myth: 'Monitored coastal swamp changes and lower horizon points along the marsh shores.', mass: '1.5 M☉', distance: '11.4 ly', radius: '2.05 R☉' },
-  { name: 'Kakkab MUSH (The Serpent)', modern: 'Alpha Hydrae (Alphard)', ra0: 141.896, dec0: -8.659, mag: 1.98, color: '#FFA870', myth: 'Represented foundation magic and structural roots stretching beneath the earth.', mass: '3.03 M☉', distance: '177 ly', radius: '50.5 R☉' },
-  { name: 'Kakkab UGA (The Raven)', modern: 'Gamma Corvi (Gienah)', ra0: 183.950, dec0: -17.542, mag: 2.59, color: '#FFB070', myth: 'Its early morning rising forecast harvest damage from wind storms and rain anomalies.', mass: '4.2 M☉', distance: '165 ly', radius: '4.9 R☉' },
-  { name: 'Kakkab EN.TE.NA.BAR.HUM (Mouse)', modern: 'Theta Centauri', ra0: 211.671, dec0: -36.370, mag: 2.06, color: '#FFC880', myth: 'Tied to preserving local grain storages against late autumn dampness and rodent pests.', mass: '4.0 M☉', distance: '58.8 ly', radius: '16.0 R☉' },
-  { name: 'Kakkab UR.IDIM (Wild Hound)', modern: 'Alpha Lupi', ra0: 220.479, dec0: -47.388, mag: 2.30, color: '#FFB880', myth: 'Represented the multi-headed monstrous beasts guarding the underworld gates.', mass: '10.1 M☉', distance: '460 ly', radius: '8.0 R☉' },
-  { name: 'Kakkab EREDU (Star of Eridu)', modern: 'Zeta Puppis', ra0: 120.896, dec0: -40.003, mag: 2.21, color: '#B8D0FF', myth: 'Managed ritual water purifications and marked the earliest city layout on earth.', mass: '22.5 M☉', distance: '1080 ly', radius: '14.0 R☉' },
-  { name: 'Kakkab NUN.KI (The Confluence)', modern: 'Delta Sagittarii', ra0: 275.246, dec0: -29.828, mag: 2.72, color: '#FFB070', myth: 'The deep water meeting point where fresh water channels and salty seas mixed together.', mass: '5.0 M☉', distance: '305 ly', radius: '16.0 R☉' },
-  { name: 'Kakkab SUHUR.MASH (Goat-Fish)', modern: 'Delta Capricorni', ra0: 326.758, dec0: -16.127, mag: 2.85, color: '#FFD0A0', myth: 'The personal icon of Ea, tracking the return of hidden wisdom from winter depths.', mass: '2.0 M☉', distance: '39 ly', radius: '1.9 R☉' },
-  { name: 'Kakkab SIM.MAH (The Swallow)', modern: 'Epsilon Pegasi', ra0: 326.046, dec0: 9.875, mag: 2.38, color: '#FFD0A0', myth: 'Signalled early migration tracks and marked the physical end of the winter calendar.', mass: '6.7 M☉', distance: '690 ly', radius: '150 R☉' }
+    ],    stars: [
+  { name: 'Sopdet', modern: 'Sirius (α Canis Majoris)', ra0: 101.288, dec0: -16.716, mag: -1.46, color: '#A0C8FF', myth: 'The star of the year. Sopdet\'s heliacal rising after 70 days of invisibility announced Wepet Renpet and the Nile flood. The only decan whose identification is certain.', mass: '2.06 M☉', distance: '8.6 ly', radius: '1.71 R☉' },
+  { name: 'Sit', modern: 'Procyon (α Canis Minoris)', ra0: 114.825, dec0: 5.225, mag: 0.34, color: '#FFE0C0', myth: 'The Lesser Dog Star, follower of Sopdet. It rises before the greater Dog and opens the second ten-day week of the year.', mass: '1.5 M☉', distance: '11.5 ly', radius: '2.05 R☉' },
+  { name: 'Knem', modern: 'Castor (α Geminorum)', ra0: 113.65, dec0: 31.888, mag: 1.58, color: '#FFE0C0', myth: 'The dual force, rising near Castor and Pollux. Carries the Horus element in the decanal lists.', mass: '~2.2 M☉', distance: '51 ly', radius: '~2.4 R☉' },
+  { name: 'Hat-djat', modern: 'Regulus (α Leonis)', ra0: 152.092, dec0: 11.967, mag: 1.35, color: '#B0D0FF', myth: 'Head of the hunt in the Lion\'s mane — the royal decan opening Leo, a symbol of kingship.', mass: '3.8 M☉', distance: '79.3 ly', radius: '3.0 R☉' },
+  { name: 'Phu-djat', modern: 'Denebola (β Leonis)', ra0: 177.263, dec0: 14.572, mag: 2.14, color: '#FFE0C0', myth: 'End of the hunt — the Lion\'s tail, closing the second Leo decade.', mass: '1.75 M☉', distance: '35.9 ly', radius: '1.73 R☉' },
+  { name: 'Tem', modern: 'Beta Comae Berenices', ra0: 197.968, dec0: 27.878, mag: 4.26, color: '#FFF4E0', myth: 'The evening-sun form of Atum-Ra, set in the hair of Coma Berenices at the close of Leo.', mass: '1.1 M☉', distance: '29.8 ly', radius: '1.07 R☉' },
+  { name: 'Wseti', modern: 'Vindemiatrix (ε Virginis)', ra0: 195.542, dec0: 10.959, mag: 2.85, color: '#FFD8A0', myth: 'The supreme grain thresher — the harvest decan opening Virgo.', mass: '2.6 M☉', distance: '110 ly', radius: '10 R☉' },
+  { name: 'Bekati', modern: 'Spica (α Virginis)', ra0: 201.3, dec0: -11.161, mag: 0.98, color: '#B0D4FF', myth: 'The wheat ear of Virgo, decan of abundance.', mass: '11.43 M☉', distance: '250 ly', radius: '7.47 R☉' },
+  { name: 'Tepi-a Khentet', modern: 'Arcturus (α Boötis)', ra0: 213.913, dec0: 19.182, mag: -0.05, color: '#FFB060', myth: 'The one in front — the path-opening decan at the close of Virgo.', mass: '1.08 M☉', distance: '36.7 ly', radius: '25.4 R☉' },
+  { name: 'Khentet', modern: 'Menkent (θ Centauri)', ra0: 211.671, dec0: -36.37, mag: 2.06, color: '#FFB070', myth: 'The guide above, rising near the autumn equinox from the Centaurus field.', mass: '~2 M☉', distance: '58.8 ly', radius: '10.6 R☉' },
+  { name: 'Khentet-Kheret', modern: 'Hadar (β Centauri)', ra0: 210.956, dec0: -60.373, mag: 0.61, color: '#B0D0FF', myth: 'The guide below, lower companion of Khentet in Centaurus.', mass: '12 M☉', distance: '390 ly', radius: '9 R☉' },
+  { name: 'Tjemes', modern: 'Alniyat (σ Scorpii)', ra0: 245.298, dec0: -25.593, mag: 2.88, color: '#FF9060', myth: 'The red one of Khentet — the name means red, and many scholars identify Tjemes with Antares itself; shown here as Antares\'s neighbour.', mass: '~18 M☉', distance: '~700 ly', radius: '~12 R☉' },
+  { name: 'Sapti-khennu', modern: 'Antares (α Scorpii)', ra0: 247.35, dec0: -26.432, mag: 1.05, color: '#FF6040', myth: 'The scorpion\'s heart — a dangerous, powerful star at the threshold of Scorpio.', mass: '11.2 M☉', distance: '550 ly', radius: '680 R☉' },
+  { name: 'Hetep-Redui', modern: 'Sargas (θ Scorpii)', ra0: 264.33, dec0: -42.998, mag: 1.86, color: '#FFD8A0', myth: 'The boatman in the middle of the scorpion\'s tail, tied to the solar boat.', mass: '5.7 M☉', distance: '300 ly', radius: '26 R☉' },
+  { name: 'Sheshmu', modern: 'Kaus Media (δ Sagittarii)', ra0: 275.246, dec0: -29.828, mag: 2.72, color: '#FFB070', myth: 'The wine-press god of the western Archer.', mass: '5.0 M☉', distance: '305 ly', radius: '16 R☉' },
+  { name: 'Knemu', modern: 'Nunki (σ Sagittarii)', ra0: 283.813, dec0: -26.297, mag: 2.05, color: '#FFB880', myth: 'The shepherd-demigod of the central Archer, a decanal reflection of Khnum.', mass: '7.8 M☉', distance: '228 ly', radius: '4.5 R☉' },
+  { name: 'Tjes-Arq', modern: 'Ascella (ζ Sagittarii)', ra0: 285.65, dec0: -29.88, mag: 2.6, color: '#FFD0A0', myth: 'The binding and loosening — decan of knots in the eastern Archer.', mass: '~4 M☉', distance: '88 ly', radius: '~4 R☉' },
+  { name: 'Wareti', modern: 'Altair (α Aquilae)', ra0: 297.696, dec0: 8.868, mag: 0.76, color: '#FFE0C0', myth: 'The sheep at the threshold of Capricorn, rising with the Eagle.', mass: '1.79 M☉', distance: '16.7 ly', radius: '1.63 R☉' },
+  { name: 'Sasa', modern: 'Alshain (β Aquilae)', ra0: 298.828, dec0: 6.407, mag: 3.71, color: '#FFE0C0', myth: 'The winter solstice decan of the western Eagle.', mass: '1.3 M☉', distance: '44.7 ly', radius: '~3 R☉' },
+  { name: 'Khau', modern: 'Dabih (β Capricorni)', ra0: 305.252, dec0: -14.781, mag: 3.05, color: '#FFD0A0', myth: 'The thousand — decan of multiplicity in central Capricorn.', mass: '~5 M☉', distance: '~330 ly', radius: '~30 R☉' },
+  { name: 'Aret', modern: 'Deneb Algedi (δ Capricorni)', ra0: 326.758, dec0: -16.127, mag: 2.85, color: '#FFE0C0', myth: 'The jaw — decan of word and command, where Mars was exalted in the later zodiac.', mass: '2.1 M☉', distance: '~105 ly', radius: '~8.5 R☉' },
+  { name: 'Remen-hare-Khry', modern: 'Sadalsuud (β Aquarii)', ra0: 322.89, dec0: -5.571, mag: 2.91, color: '#FFD8A0', myth: 'The upper and lower shoulder — decan of the Nile waters in western Aquarius.', mass: '~5 M☉', distance: '~540 ly', radius: '~50 R☉' },
+  { name: 'Tjes-Arq-Aqer', modern: 'Sadalmelik (α Aquarii)', ra0: 331.446, dec0: -0.32, mag: 2.95, color: '#B8D8FF', myth: 'The lifting upright — rising of the waters in central Aquarius.', mass: '5.1 M☉', distance: '520 ly', radius: '77 R☉' },
+  { name: 'Wareti-Repu', modern: 'Skat (δ Aquarii)', ra0: 343.66, dec0: -15.821, mag: 3.27, color: '#B8D8FF', myth: 'The two souls — the dual ba of eastern Aquarius.', mass: '~3 M☉', distance: '~160 ly', radius: '~2.5 R☉' },
+  { name: 'Hepa-renpet', modern: 'Gamma Piscium', ra0: 349.29, dec0: 3.283, mag: 3.69, color: '#FFE0C0', myth: 'The year-keeper of southern Pisces.', mass: '~2.5 M☉', distance: '~138 ly', radius: '~10 R☉' },
+  { name: 'Hepa-djesert', modern: 'Alrescha (α Piscium)', ra0: 30.513, dec0: 2.764, mag: 3.82, color: '#FFE0C0', myth: 'The hidden desert — the mystical knot that binds the two fish.', mass: '~2.5 M☉', distance: '~140 ly', radius: '~3 R☉' },
+  { name: 'Phu-hor', modern: 'Eta Piscium', ra0: 22.871, dec0: 15.342, mag: 3.62, color: '#FFE0C0', myth: 'The end of Horus — threshold of spring, where Venus was exalted in the later zodiac.', mass: '~2.5 M☉', distance: '~170 ly', radius: '~10 R☉' },
+  { name: 'Khent-Heru', modern: 'Hamal (α Arietis)', ra0: 31.792, dec0: 23.462, mag: 2.01, color: '#FFC080', myth: 'Front Horus — the spring equinox decan of western Aries.', mass: '1.5 M☉', distance: '65.8 ly', radius: '14.9 R☉' },
+  { name: 'Knem-Heru', modern: 'Sheratan (β Arietis)', ra0: 28.66, dec0: 20.808, mag: 2.64, color: '#FFC080', myth: 'The potter — creative force of central Aries, where the Sun was exalted in the later zodiac.', mass: '~2.7 M☉', distance: '~60 ly', radius: '~2.5 R☉' },
+  { name: 'Smat', modern: '41 Arietis (Bharani)', ra0: 42.496, dec0: 27.261, mag: 3.61, color: '#FFA060', myth: 'Forerunner of the Pleiades at the close of Aries.', mass: '2.6 M☉', distance: '166 ly', radius: '2.1 R☉' },
+  { name: 'Sertua', modern: 'Alcyone (η Tauri)', ra0: 56.871, dec0: 24.105, mag: 2.85, color: '#A0C8FF', myth: 'The Seven Sisters on the Bull\'s shoulder, where the Moon was exalted in the later zodiac.', mass: '6.0 M☉', distance: '440 ly', radius: '10 R☉' },
+  { name: 'Hepi', modern: 'Aldebaran (α Tauri)', ra0: 68.979, dec0: 16.509, mag: 0.85, color: '#FF8040', myth: 'The bull\'s eye, connected to Hapi the flood god.', mass: '1.16 M☉', distance: '65.3 ly', radius: '44.1 R☉' },
+  { name: 'Phui-Hepi', modern: 'Hyadum I (γ Tauri)', ra0: 64.946, dec0: 15.628, mag: 3.65, color: '#FFD8A0', myth: 'The bull\'s horn in the Hyades field.', mass: '~2.7 M☉', distance: '~154 ly', radius: '~13 R☉' },
+  { name: 'Tjes-Arq-Khentu', modern: 'Alnilam (ε Orionis)', ra0: 84.053, dec0: -1.202, mag: 1.69, color: '#B0D0FF', myth: 'The belt of Sah/Osiris — the first Orion decade.', mass: '~32 M☉', distance: '~2000 ly', radius: '~28 R☉' },
+  { name: 'Knem-Khentu', modern: 'Betelgeuse (α Orionis)', ra0: 88.792, dec0: 7.407, mag: 0.5, color: '#FF6040', myth: 'The body of Sah/Osiris — when Orion was invisible, Osiris slept in the underworld.', mass: '16.5 M☉', distance: '642 ly', radius: '887 R☉' },
+  { name: 'Tepa-Khentu', modern: 'Wezen (δ Canis Majoris)', ra0: 107.096, dec0: -26.393, mag: 1.83, color: '#FFA860', myth: 'The herald of Sopdet in western Canis Major — closes the year cycle.', mass: '16.9 M☉', distance: '1600 ly', radius: '215 R☉' },
 ],
     calendar: {
       title: 'Egyptian Civil Calendar — The Sothic Cycle',
@@ -292,7 +242,7 @@ const CIVS = {
         { name: 'Shemu (Harvest season)', val: '4 months (Pachons–Mesori)' },
         { name: 'Hour Division', val: '12 day + 12 night hours' }
       ],
-      lore: 'The Pyramid Texts (c. 2400 BCE) are the oldest religious texts in the world, recording the star-knowledge embedded in pyramid architecture. The Great Pyramid\'s southern air shafts pointed to Orion\'s Belt and Thuban (then pole star) c. 2450 BCE. Dendera\'s temple ceiling (c. 50 BCE) contains the famous Circular Zodiac — the earliest complete star map, now in the Louvre. The Egyptian astronomer-priests (Kherep Serqet) tracked 36 decans — star groups rising at 10-day intervals.'
+      lore: 'The Pyramid Texts (c. 2400 BC) are the oldest religious texts in the world, recording the star-knowledge embedded in pyramid architecture. The Great Pyramid\'s southern air shafts pointed to Orion\'s Belt and Thuban (then pole star) c. 2450 BC. Dendera\'s temple ceiling (c. 50 BC) contains the famous Circular Zodiac — the earliest complete star map, now in the Louvre. The Egyptian astronomer-priests (Kherep Serqet) tracked 36 decans — star groups rising at 10-day intervals.'
     }
   },
 
@@ -300,25 +250,17 @@ const CIVS = {
     name: 'Classical Greece',
     themeClass: 'theme-greece',
     accent: '#C8B8A0',
-    bgImage: 'ChatGPT_Image_May_22__2026__12_37_58_AM.png',
+    bgImage: '',
+
     deities: [
       {
-        id: 'zeus',
-        name: 'Zeus & the Olympians',
-        role: 'King of Olympos — Sovereign of Sky and Thunder',
-        domains: ['Thunder','Lightning','Justice','Kingship'],
-        img: 'ChatGPT_Image_May_22__2026__12_37_58_AM.png',
-        myth: 'Zeus, son of Kronos and Rhea, was saved from being swallowed by his father by a trick of stone-substitution. He led the Olympians in the Titanomachy (war against the Titans) lasting ten years, sealing them in Tartarus. He rules from Mount Olympos with his thunderbolt forged by the Cyclopes. He is the god of hospitality (Xenia) and the divine guarantee of oaths. His eagle soars as divine messenger across both heaven and earth.',
-        stats: { weapon: 'Keraunos (thunderbolt)', bird: 'Eagle', tree: 'Oak', oracle: 'Dodona (oldest Greek oracle)' }
-      },
-      {
-        id: 'apollo',
-        name: 'Apollo',
-        role: 'God of the Sun, Music, Prophecy and Healing',
-        domains: ['Sun','Music','Prophecy','Healing','Archery'],
-        img: 'ChatGPT_Image_May_22__2026__12_24_36_AM.png',
-        myth: 'Apollo, twin of Artemis, born on Delos island, slew the Python at Delphi and established the greatest oracle of the ancient world. His lyre, given by Hermes, enchanted all creation. He drives the solar chariot across the sky. Patron of the Muses, he is the god of light, reason, truth, and art. His many loves include Hyacinthus, Cassandra (whom he cursed with true prophecy never believed), and Daphne who became the laurel tree.',
-        stats: { twin: 'Artemis', instrument: 'Kithara (lyre)', oracle: 'Delphi (Pythia)', chariot: 'Golden solar chariot with 4 horses' }
+        id: 'hades',
+        name: 'Hades',
+        role: 'Lord of the Underworld — The Unseen One',
+        domains: ['Underworld','Death','Wealth','The Dead'],
+        img: '',
+        myth: 'Hades, son of Kronos and Rhea, drew the lot of the mists and darkness when the world was divided three ways among the brothers, and rules the dead beneath the earth from his shadowed halls of Erebos. He is stern and unyielding but never evil — the Greeks feared even to speak his name, calling him instead Pluto, "the Wealthy One", for all riches of gem and grain spring from his dark soil. His helm of darkness renders its wearer invisible, and the three-headed hound Cerberus guards his gate. His queen is Persephone, whom he carried off from the fields of her mother Demeter.',
+        stats: { symbol: 'Helm of darkness (Kyneê)', companion: 'Cerberus, the three-headed hound', consort: 'Persephone, daughter of Demeter', realm: 'Erebos, beneath the earth' }
       },
       {
         id: 'poseidon',
@@ -326,38 +268,46 @@ const CIVS = {
         role: 'Lord of the Sea — Earth Shaker',
         domains: ['Ocean','Earthquakes','Horses','Storms'],
         img: '',
-        myth: 'Poseidon rules all water realms from his underwater palace of gold and coral. He strikes the earth with his trident causing earthquakes (called "the Earth-Shaker" — Ennosigaios). He and Athena competed for patronage of Athens — he struck rock and produced a salt spring, she grew the olive tree, and the people chose her gift. Creator of horses by striking the ocean with his trident.',
+        myth: 'Poseidon, son of Kronos, drew the lot of the sea when the world was divided three ways, and rules all waters from his palace of gold at Aegae beneath the Aegean. He strikes the earth with his trident causing earthquakes — men call him Ennosigaios, the Earth-Shaker. He and Athena competed for patronage of Athens — he struck rock and produced a salt spring, she grew the olive tree, and the people chose her gift. Creator of horses by striking the ocean with his trident, he rides a chariot of white steeds over the waves.',
         stats: { weapon: 'Trident (Triaina)', realm: 'All seas and oceans', palace: 'Aegae, beneath the Aegean', dispute: 'Lost Athens to Athena' }
       },
       {
-        id: 'athena',
-        name: 'Athena',
-        role: 'Goddess of Wisdom and Strategic Warfare',
-        domains: ['Wisdom','Craft','Strategy','Weaving','Olive'],
+        id: 'zeus',
+        name: 'Zeus',
+        role: 'King of Olympos — Sovereign of Sky and Thunder',
+        domains: ['Thunder','Lightning','Justice','Kingship'],
         img: '',
-        myth: 'Athena was born fully-formed and armored from the head of Zeus after Hephaestus split his skull with an axe. She is the virgin goddess of wisdom and just warfare (as opposed to Ares\' brutal violence). Patron of Athens, she gifted humanity the olive tree. Her aegis (divine shield) bore the head of Medusa. Odysseus was her favourite mortal hero. The Parthenon on the Acropolis housed her 12-meter gold-and-ivory cult statue.',
-        stats: { birth: 'From Zeus\'s head, fully armored', owl: 'Sacred animal', olive: 'Sacred tree', shield: 'Aegis with Medusa\'s head' }
+        myth: 'Zeus, the youngest son of Kronos and Rhea, was saved from being swallowed by his father by a trick of stone-substitution. He freed his swallowed siblings and led the Olympians in the Titanomachy — a ten-year war against the Titans — sealing them in Tartarus. When the victory was won, the brothers drew lots: Zeus took the sky, Poseidon the sea, Hades the underworld. He rules from Mount Olympos with his thunderbolt forged by the Cyclopes, the god of hospitality (Xenia) and the divine guarantee of oaths. His eagle soars as divine messenger across both heaven and earth.',
+        stats: { weapon: 'Keraunos (thunderbolt)', bird: 'Eagle', tree: 'Oak', oracle: 'Dodona (oldest Greek oracle)' }
       },
       {
-        id: 'hermes',
-        name: 'Hermes',
-        role: 'Messenger of the Gods — Psychopomp',
-        domains: ['Commerce','Travel','Thieves','Souls','Language'],
+        id: 'hestia',
+        name: 'Hestia',
+        role: 'Goddess of the Hearth — First and Last of the Children',
+        domains: ['Hearth','Home','Family','Fire'],
         img: '',
-        myth: 'Hermes, born at dawn on Mount Kyllene, had stolen Apollo\'s cattle by evening and invented the lyre before sunset — an infant of extraordinary cunning. He wears winged sandals (talaria) and helmet, carries the caduceus (snake-entwined staff), and escorts souls to the underworld (Psychopomp). He invented writing, astronomy, and the lyre. He is the patron of crossroads, travellers, merchants, and thieves.',
-        stats: { sandals: 'Talaria (golden wings)', staff: 'Caduceus', role: 'Messenger + Psychopomp', first_day: 'Stole Apollo\'s cattle as newborn' }
+        myth: 'Hestia, daughter of Kronos and Rhea, was the first of her father\'s children to be swallowed and the last to be set free — the beginning and the end of the Olympian line. She is the virgin goddess of the hearth-fire that burns in every home and in the prytaneion (city hall) of every Greek town, the gentlest of all the gods. She renounced her throne on Olympos to tend the sacred flame, and every prayer and every sacrifice begins and ends with her. No adventures are told of her — her whole story is the fire that must never go out.',
+        stats: { symbol: 'Hearth flame and kettle', vow: 'Eternal virginity, sworn to Zeus', throne: 'Gave up her seat on Olympos', honour: 'First and last portion of every sacrifice' }
       },
       {
-        id: 'ares',
-        name: 'Ares',
-        role: 'God of War and Bloodlust',
-        domains: ['War','Violence','Courage','Destruction'],
+        id: 'demeter',
+        name: 'Demeter',
+        role: 'Goddess of the Harvest — Mother of the Grain',
+        domains: ['Harvest','Agriculture','Fertility','Mysteries'],
         img: '',
-        myth: 'Ares, the volatile god of war, revels in the carnage and chaos of battle — unlike strategic Athena. Even his father Zeus disliked him, calling him "the most hated of gods." He had children with Aphrodite including Eros (Love) and Phobos/Deimos (Fear/Dread), who became his chariot horses in battle. He was twice wounded by the mortal Diomedes with Athena\'s help during the Trojan War, retreating to Olympos wailing.',
-        stats: { chariot: 'Pulled by Phobos and Deimos', father: 'Zeus', mother: 'Hera', lover: 'Aphrodite' }
+        myth: 'Demeter, daughter of Kronos and Rhea, is the goddess of grain and the abundance of the earth. When Hades carried her daughter Persephone down to the underworld, Demeter withheld her gifts and the world starved, until Zeus brokered a bargain: Persephone spends part of each year below and returns each spring — the ancient explanation of the seasons. In her grief she came to Eleusis disguised as an old woman, and there taught mortals her sacred rites: the Eleusinian Mysteries, the most holy initiation of the ancient world, promising its initiates a blessed afterlife.',
+        stats: { symbol: 'Wheat sheaf and torch', daughter: 'Persephone (by Zeus)', sanctuary: 'Eleusis', rites: 'The Eleusinian Mysteries' }
+      },
+      {
+        id: 'hera',
+        name: 'Hera',
+        role: 'Queen of Olympos — Goddess of Marriage',
+        domains: ['Marriage','Queenship','Childbirth','Family'],
+        img: '',
+        myth: 'Hera, daughter of Kronos and Rhea, is sister and wife of Zeus and the queen of the gods — cow-eyed, golden-throned, and jealous beyond measure of her husband\'s countless affairs. She tormented Herakles and Io, championed the Greeks at Troy, and once led a rebellion to bind Zeus in a hundred knots. Yet she is the divine guardian of marriage, childbirth and lawful order — the one goddess whose union makes Zeus king. Her sacred animals are the peacock and the cow, her sacred city Argos.',
+        stats: { symbol: 'Diadem, sceptre, peacock', city: 'Argos', children: 'Ares, Hephaestus, Hebe, Eileithyia', title: 'Queen of gods and men' }
       }
-    ],
-    stars: [
+    ],    stars: [
   // PTOLEMY'S ALMAGEST PRIMARY STARS (11 stars)
   { name: 'Kyon (The Dog)', modern: 'Alpha Canis Majoris (Sirius)', ra0: 101.288, dec0: -16.716, mag: -1.46, color: '#A0C8FF', myth: 'Ptolemy\'s premier tracking anchor. Celebrated by Homer and Hipparchus as the swiftest cosmic watchdog, whose scorching midsummer appearance brought heatwaves.', mass: '2.06 M☉', distance: '8.6 ly', radius: '1.71 R☉' },
   { name: 'Arktouros (The Bear Watcher)', modern: 'Alpha Boötis (Arcturus)', ra0: 213.913, dec0: 19.182, mag: -0.05, color: '#FFB060', myth: 'The eternal guardian of the northern sky, tasked with tracking and driving the Great Bear (Ursa Major) around the celestial polar axis.', mass: '1.08 M☉', distance: '36.7 ly', radius: '25.4 R☉' },
@@ -398,7 +348,7 @@ const CIVS = {
 ],
     calendar: {
       title: 'Greek Lunisolar Calendar (Athenian Metonic Cycle)',
-      system: 'Athens used a lunisolar calendar of 12 or 13 months, beginning at the first new moon after the summer solstice. The Metonic Cycle (Meton of Athens, 432 BCE) discovered that 19 solar years ≈ 235 lunar months, allowing precise calendar intercalation.',
+      system: 'Athens used a lunisolar calendar of 12 or 13 months, beginning at the first new moon after the summer solstice. The Metonic Cycle (Meton of Athens, 432 BC) discovered that 19 solar years ≈ 235 lunar months, allowing precise calendar intercalation.',
       math: [
         '19 Tropical Years = 6939.6018 days',
         '235 Synodic Months = 6939.6887 days',
@@ -406,7 +356,7 @@ const CIVS = {
         '12 ordinary years (354 days) + 7 leap years (384 days) = 19 years',
         'Callippic Cycle: 4 × Metonic − 1 day = 76 years',
         'Hipparchan Cycle: 304 years (4 × Callippic)',
-        'Olympiad: 4-year festival cycle (first: 776 BCE)'
+        'Olympiad: 4-year festival cycle (first: 776 BC)'
       ],
       cycles: [
         { name: 'Athenian Lunar Month', val: '29 or 30 days' },
@@ -418,7 +368,7 @@ const CIVS = {
         { name: 'Saros Cycle (eclipse)', val: '18 years 11 days' },
         { name: 'Exeligmos', val: '3 × Saros = 54 years' }
       ],
-      lore: 'Hipparchus of Nicaea (c. 190–120 BCE) discovered axial precession by comparing positions of Spica with earlier Babylonian records — detecting the equinox point had moved ~2° in 150 years. Eratosthenes (c. 276–194 BCE) calculated Earth\'s circumference to within ~1% using a gnomon at Alexandria and the known distance to Syene. Aristarchus of Samos (c. 310 BCE) proposed the heliocentric model 1,800 years before Copernicus.'
+      lore: 'Hipparchus of Nicaea (c. 190–120 BC) discovered axial precession by comparing positions of Spica with earlier Babylonian records — detecting the equinox point had moved ~2° in 150 years. Eratosthenes (c. 276–194 BC) calculated Earth\'s circumference to within ~1% using a gnomon at Alexandria and the known distance to Syene. Aristarchus of Samos (c. 310 BC) proposed the heliocentric model 1,800 years before Copernicus.'
     }
   },
 
@@ -434,7 +384,7 @@ const CIVS = {
         role: 'Supreme God of Babylon — Lord of the Universe',
         domains: ['Creation','Magic','Justice','Water'],
         img: '',
-        myth: 'Marduk, champion of the younger gods, slew the primordial chaos-dragon Tiamat and from her split body fashioned heaven and earth — as described in the Enuma Elish (c. 1100 BCE), the great Babylonian creation epic. He established 50 divine names (one for each of his powers), fixed the stars in their courses, and created humanity from the blood of Kingu to serve the gods. Babylon\'s great ziggurat Etemenanki ("House of the foundation of heaven and earth") was his temple-mountain.',
+        myth: 'Marduk, champion of the younger gods, slew the primordial chaos-dragon Tiamat and from her split body fashioned heaven and earth — as described in the Enuma Elish (c. 1100 BC), the great Babylonian creation epic. He established 50 divine names (one for each of his powers), fixed the stars in their courses, and created humanity from the blood of Kingu to serve the gods. Babylon\'s great ziggurat Etemenanki ("House of the foundation of heaven and earth") was his temple-mountain.',
         stats: { weapon: 'Marru (spade)', animal: 'Dragon (Mushhushshu)', planet: 'Jupiter', text: 'Enuma Elish' }
       },
       {
@@ -443,8 +393,8 @@ const CIVS = {
         role: 'Goddess of Love, War and Venus',
         domains: ['Love','War','Venus','Fertility','Power'],
         img: '',
-        myth: 'Ishtar (Sumerian: Inanna) is the most powerful goddess of Mesopotamia — goddess of erotic love and brutal warfare simultaneously. Her descent to the underworld through seven gates, surrendering an adornment at each, is one of humanity\'s oldest stories. She demanded the Bull of Heaven to slay Gilgamesh after he refused her. Her planet was Venus, appearing as morning and evening star. The Ishtar Gate of Babylon (575 BCE) was covered in lapis lazuli and depicted her sacred lions.',
-        stats: { planet: 'Venus (morning + evening)', gate: 'Ishtar Gate, Babylon 575 BCE', symbol: 'Eight-pointed star', descent: '7 Gates of the Underworld' }
+        myth: 'Ishtar (Sumerian: Inanna) is the most powerful goddess of Mesopotamia — goddess of erotic love and brutal warfare simultaneously. Her descent to the underworld through seven gates, surrendering an adornment at each, is one of humanity\'s oldest stories. She demanded the Bull of Heaven to slay Gilgamesh after he refused her. Her planet was Venus, appearing as morning and evening star. The Ishtar Gate of Babylon (575 BC) was covered in lapis lazuli and depicted her sacred lions.',
+        stats: { planet: 'Venus (morning + evening)', gate: 'Ishtar Gate, Babylon 575 BC', symbol: 'Eight-pointed star', descent: '7 Gates of the Underworld' }
       },
       {
         id: 'enlil',
@@ -452,7 +402,7 @@ const CIVS = {
         role: 'God of Wind and Supreme Authority',
         domains: ['Wind','Storm','Kingship','Fate','Earth'],
         img: '',
-        myth: 'Enlil, "Lord of Wind," was the active executive power of the Sumerian pantheon. He separated An (sky) from Ki (earth), creating the space for life. He decreed the Great Flood (Atrahasis Epic, c. 1700 BCE) to destroy humanity — the Babylonian Noah story predates the biblical version by over a millennium. His temple Ekur ("Mountain House") at Nippur was the religious center of Sumer. He wrote fate on heavenly tablets.',
+        myth: 'Enlil, "Lord of Wind," was the active executive power of the Sumerian pantheon. He separated An (sky) from Ki (earth), creating the space for life. He decreed the Great Flood (Atrahasis Epic, c. 1700 BC) to destroy humanity — the Babylonian Noah story predates the biblical version by over a millennium. His temple Ekur ("Mountain House") at Nippur was the religious center of Sumer. He wrote fate on heavenly tablets.',
         stats: { temple: 'Ekur at Nippur', tablets: 'Tablets of Destiny', flood: 'Decreed the great deluge', realm: 'Earth and atmosphere' }
       },
       {
@@ -479,7 +429,7 @@ const CIVS = {
         role: 'Sun God — God of Justice and Law',
         domains: ['Sun','Justice','Law','Divination','Truth'],
         img: '',
-        myth: 'Shamash, the all-seeing sun, traverses the sky in a fiery chariot drawn by the divine horses Etana and Kibra, entering through the mountains at dawn and departing at dusk into the Underworld. As supreme judge, he stands above all human law — the famous Code of Hammurabi (c. 1754 BCE) was given to Hammurabi directly by Shamash, depicted on the stele\'s famous relief. He destroys evil with his solar rays and is the patron of diviners.',
+        myth: 'Shamash, the all-seeing sun, traverses the sky in a fiery chariot drawn by the divine horses Etana and Kibra, entering through the mountains at dawn and departing at dusk into the Underworld. As supreme judge, he stands above all human law — the famous Code of Hammurabi (c. 1754 BC) was given to Hammurabi directly by Shamash, depicted on the stele\'s famous relief. He destroys evil with his solar rays and is the patron of diviners.',
         stats: { transport: 'Fiery chariot through sky gates', symbol: 'Winged solar disc + saw', law: 'Hammurabi Code given by Shamash', saw: 'For "cutting through" injustice' }
       }
     ],
@@ -487,8 +437,8 @@ const CIVS = {
   // ENLIL PATH (12 stars)
   { name: 'MUL.SIPA.ZI.AN.NA (True Shepherd)', modern: 'Alpha Orionis (Betelgeuse)', ra0: 88.792, dec0: 7.407, mag: 0.50, color: '#FF6040', myth: 'The cosmic leader of the constellations. Acts as the divine herald carrying decrees between the gods of heaven and earth.', mass: '16.5 M☉', distance: '642 ly', radius: '887 R☉' },
   { name: 'MUL.KAK.SI.SÁ (The Arrow)', modern: 'Alpha Canis Majoris (Sirius)', ra0: 101.288, dec0: -16.716, mag: -1.46, color: '#A0C8FF', myth: 'The most brilliant beacon in the sky. Its piercing ray was believed to measure the deep horizons and trigger the midsummer rain systems.', mass: '2.06 M☉', distance: '8.6 ly', radius: '1.71 R☉' },
-  { name: 'MUL.BAN (The Bow)', modern: 'Alpha Carinae (Canopus)', ra0: 95.988, dec0: -52.696, mag: -0.74, color: '#C0E0FF', myth: 'The heavy war bow drawn back to protect the celestial alignment. Used to aim the arrow at chaotic cosmic monsters.', mass: '8.0 M☉', distance: '310 ly', radius: '71.0 R☉' },
-  { name: 'MUL.MAR.GÍD.DA (The Wagon)', modern: 'Alpha Lyrae (Vega)', ra0: 279.233, dec0: 38.784, mag: 0.03, color: '#C0D8FF', myth: 'The permanent northern freight carriage. Its steady elevation and bright visibility tracked structural agricultural timekeeping blocks.', mass: '2.13 M☉', distance: '25 ly', radius: '2.36 R☉' },
+  { name: 'MUL.BAN (The Bow)', modern: 'Delta Canis Majoris (Wezen)', ra0: 107.096, dec0: -26.393, mag: 1.83, color: '#FFA860', myth: 'The great Bow of the Elamite wars, drawn beside the Arrow (Sirius) and aimed at sky monsters.', mass: '16.9 M☉', distance: '1600 ly', radius: '215 R☉' },
+  { name: 'MUL.MAR.GÍD.DA (The Wagon)', modern: 'Alpha Ursae Majoris (Dubhe)', ra0: 165.933, dec0: 61.751, mag: 1.79, color: '#FFE0C0', myth: 'The Heavenly Wagon, whose unblinking circumpolar rotation in Ursa Major tracked the nightly hours and steered the gods.', mass: '4.25 M☉', distance: '123 ly', radius: '30.0 R☉' },
   { name: 'MUL.UZ (The She-Goat)', modern: 'Alpha Aurigae (Capella)', ra0: 79.171, dec0: 45.998, mag: 0.08, color: '#FFE0A0', myth: 'Tied to the supreme goddess of healing and restoration. Shines directly over northern pastoral lands to bless grazing herds.', mass: '2.56 M☉', distance: '42.8 ly', radius: '11.98 R☉' },
   { name: 'MUL.ŠU.PA (The Leader)', modern: 'Alpha Boötis (Arcturus)', ra0: 213.913, dec0: 19.182, mag: -0.05, color: '#FFB060', myth: 'The majestic axis rod of Enlil\'s northern sky track. It holds structural governance over atmospheric weather and storms.', mass: '1.08 M☉', distance: '36.7 ly', radius: '25.4 R☉' },
   { name: 'MUL.KA.MÚŠ.I.KÚ.E (The Dragon\'s Mouth)', modern: 'Gamma Draconis (Eltanin)', ra0: 269.150, dec0: 51.489, mag: 2.24, color: '#FFD0A0', myth: 'The snapping maw of the primeval chaos serpent. Positioned high up in the circumpolar ceiling as a warning against rebellion.', mass: '1.7 M☉', distance: '148 ly', radius: '48.0 R☉' },
@@ -528,7 +478,7 @@ const CIVS = {
 ],
     calendar: {
       title: 'Babylonian Lunisolar Calendar & MUL.APIN Astronomy',
-      system: 'The Babylonian calendar was purely lunar — months began at the first visible crescent after new moon. Intercalary months were added (by royal decree, then systematically from c. 499 BCE) to keep pace with the solar year. The 19-year cycle of intercalation was independently discovered (or borrowed) before the Greek Metonic cycle.',
+      system: 'The Babylonian calendar was purely lunar — months began at the first visible crescent after new moon. Intercalary months were added (by royal decree, then systematically from c. 499 BC) to keep pace with the solar year. The 19-year cycle of intercalation was independently discovered (or borrowed) before the Greek Metonic cycle.',
       math: [
         'Babylonian Synodic Month = 29;31,50,8,20 days (sexagesimal)',
         'Converting: 29 + 31/60 + 50/3600 + 8/216000 + 20/12960000 ≈ 29.530594 days',
@@ -545,10 +495,10 @@ const CIVS = {
         { name: 'Saros Cycle (eclipse)', val: '223 months ≈ 18 yr 11 days' },
         { name: 'Metonic Cycle', val: '235 months = 19 solar years' },
         { name: 'Great Year', val: '3600 years (Sar × 600)' },
-        { name: 'Zodiac Division', val: '12 signs × 30° (invented ~450 BCE)' },
+        { name: 'Zodiac Division', val: '12 signs × 30° (invented ~450 BC)' },
         { name: 'Daily Time Division', val: '12 double-hours (beru)' }
       ],
-      lore: 'The MUL.APIN (c. 1000 BCE) is the foundational Babylonian astronomical compendium listing 66 stars and constellations, paths of the Moon through 17 stars (proto-zodiac), rising and setting dates of stars, and methods for computing intercalation. Babylonian eclipse records in cuneiform stretch back to 747 BCE without interruption — the longest continuous scientific dataset in history. Their System A and B for predicting planetary positions (c. 400 BCE) represent abstract mathematical astronomy, centuries before Hipparchus.'
+      lore: 'The MUL.APIN (c. 1000 BC) is the foundational Babylonian astronomical compendium listing 66 stars and constellations, paths of the Moon through 17 stars (proto-zodiac), rising and setting dates of stars, and methods for computing intercalation. Babylonian eclipse records in cuneiform stretch back to 747 BC without interruption — the longest continuous scientific dataset in history. Their System A and B for predicting planetary positions (c. 400 BC) represent abstract mathematical astronomy, centuries before Hipparchus.'
     }
   },
 
@@ -573,7 +523,7 @@ const CIVS = {
         role: 'Feathered Serpent — God of Wind and Venus',
         domains: ['Wind','Venus','Knowledge','Morning Star','Creation'],
         img: '',
-        myth: 'Quetzalcoatl, the Feathered Serpent, is one of the most ancient deities of Mesoamerica appearing at Teotihuacan c. 100–200 CE. As Ehecatl-Quetzalcoatl he is the wind that clears the path for rain gods. As the Morning Star (Tlahuizcalpantecuhtli) he battles the night to bring light. His mythic departure across the sea to the east — vowing to return in the year Ce Acatl (1 Reed) — created psychological vulnerability when Cortés arrived in 1519 CE.',
+        myth: 'Quetzalcoatl, the Feathered Serpent, is one of the most ancient deities of Mesoamerica appearing at Teotihuacan c. 100–200 AD. As Ehecatl-Quetzalcoatl he is the wind that clears the path for rain gods. As the Morning Star (Tlahuizcalpantecuhtli) he battles the night to bring light. His mythic departure across the sea to the east — vowing to return in the year Ce Acatl (1 Reed) — created psychological vulnerability when Cortés arrived in 1519 AD.',
         stats: { planet: 'Venus (Morning Star)', form: 'Feathered serpent + wind deity', prophecy: 'Return in year Ce Acatl (1 Reed)', site: 'Teotihuacan, Cholula, Chichen Itza' }
       },
       {
@@ -718,7 +668,7 @@ const CIVS = {
         { name: 'New Fire Ceremony', val: 'Every 52 solar years' },
         { name: 'Aztec Sun Ages', val: '5 Suns (current = 5th)' }
       ],
-      lore: 'The Aztec Sun Stone (incorrectly called "Calendar Stone") is a 3.6m, 24-ton basalt disc carved c. 1427 CE depicting the Five Suns cosmology. The four previous suns (4 Jaguar, 4 Wind, 4 Rain, 4 Water) were each destroyed by the gods. The current Fifth Sun (4 Earthquake, or Nahui Ollin) is fated to end in earthquakes. The New Fire Ceremony at the end of each 52-year bundle was the most terrifying Aztec ritual — all fires extinguished, pregnant women locked away lest they become monsters, and the entire empire held its breath waiting for the Pleiades.'
+      lore: 'The Aztec Sun Stone (incorrectly called "Calendar Stone") is a 3.6m, 24-ton basalt disc carved c. 1427 AD depicting the Five Suns cosmology. The four previous suns (4 Jaguar, 4 Wind, 4 Rain, 4 Water) were each destroyed by the gods. The current Fifth Sun (4 Earthquake, or Nahui Ollin) is fated to end in earthquakes. The New Fire Ceremony at the end of each 52-year bundle was the most terrifying Aztec ritual — all fires extinguished, pregnant women locked away lest they become monsters, and the entire empire held its breath waiting for the Pleiades.'
     }
   },
 
@@ -904,14 +854,14 @@ const CIVS = {
 ],
     calendar: {
       title: 'Maya Calendar System — Tzolk\'in, Haab\' and Long Count',
-      system: 'The Maya calendar system is the most sophisticated indigenous calendar ever devised. Three interlocking systems operate simultaneously: Tzolk\'in (260 days), Haab\' (365 days), and the Long Count — a linear count of days from the Creation Date (11 August 3114 BCE in the GMT correlation), capable of tracking millions of years.',
+      system: 'The Maya calendar system is the most sophisticated indigenous calendar ever devised. Three interlocking systems operate simultaneously: Tzolk\'in (260 days), Haab\' (365 days), and the Long Count — a linear count of days from the Creation Date (11 August 3114 BC in the GMT correlation), capable of tracking millions of years.',
       math: [
         "Tzolk'in = 20 day-names × 13 numbers = 260 days",
         "Haab' = 18 months × 20 days + 5 Wayeb' = 365 days",
         "Calendar Round = LCM(260,365) = 18,980 days = 52 Haab' years",
         'Long Count positional notation: Bak\'tun(144000).K\'atun(7200).Tun(360).Winal(20).K\'in(1)',
-        'Creation Date: 4 Ahaw 8 Kumk\'u = 0.0.0.0.0 = Aug 11, 3114 BCE',
-        'Current b\'ak\'tun 14 began: Dec 21, 2012 CE (13.0.0.0.0)',
+        'Creation Date: 4 Ahaw 8 Kumk\'u = 0.0.0.0.0 = Aug 11, 3114 BC',
+        'Current b\'ak\'tun 14 began: Dec 21, 2012 AD (13.0.0.0.0)',
         "Maya Tropical Year: 365.2420 days (error 0.0002 vs modern 365.2422)",
         "Dresden Codex Venus: 2920 days = 8 Haab' = 5 Venus synodic cycles (583.92 days each)"
       ],
@@ -927,7 +877,7 @@ const CIVS = {
         { name: "Piktun", val: '2,880,000 days = 7,885 years' },
         { name: 'Venus Table Cycle', val: '2920 days = 8 solar years' }
       ],
-      lore: 'The Dresden Codex (c. 1200–1250 CE) contains the most precise pre-telescopic astronomical tables ever produced. Its Venus Tables track the synodic cycle of Venus to an accuracy of 2 hours over 500 years. The Maya also tracked Mars (780-day synodic), and the lunar series (lunar node cycle, 6585 days = Saros) and solar eclipse warnings with precision tools only a positional number system with zero could provide. The Maya independently invented the concept of zero — a revolutionary mathematical achievement.'
+      lore: 'The Dresden Codex (c. 1200–1250 AD) contains the most precise pre-telescopic astronomical tables ever produced. Its Venus Tables track the synodic cycle of Venus to an accuracy of 2 hours over 500 years. The Maya also tracked Mars (780-day synodic), and the lunar series (lunar node cycle, 6585 days = Saros) and solar eclipse warnings with precision tools only a positional number system with zero could provide. The Maya independently invented the concept of zero — a revolutionary mathematical achievement.'
     }
   },
 
@@ -936,6 +886,38 @@ const CIVS = {
     themeClass: 'theme-inca',
     accent: '#E8C820',
     bgImage: '',
+    darkClouds: [
+      {
+        name: 'Yacana',
+        literalMeaning: 'The Great Llama',
+        ra0: 193.0, dec0: -63.7, width: 9, height: 6, angle: -10,
+        mythology: 'The great black Llama of the Andes walks the Milky Way in darkness. Her body is the black rift of the Coalsack beside the Southern Cross, and her two eyes are the brilliant stars Alpha and Beta Centauri, watching all night over her herds. Beneath her neck trots the baby llama, and the Quechua herders say that as long as the dark llama rises each night, the earthly herds will multiply. She is the celestial mother of all camelids — the source of wool, meat and life itself.'
+      },
+      {
+        name: 'Yutu',
+        literalMeaning: 'The Tinamou (Partridge)',
+        ra0: 196.5, dec0: -62.0, width: 6, height: 4, angle: 20,
+        mythology: 'The Tinamou, a small dark cloud pressed close against the Coalsack, is hunted eternally across the sky by the celestial Fox yet never caught. Andean farmers read her position to time their sowing: when the Yutu sinks low toward the horizon at planting season, the rains are near. Some Quechua communities see in the same dark patch the partridge crushed beneath the llama\'s footprint.'
+      },
+      {
+        name: 'Machacuay',
+        literalMeaning: 'The Serpent',
+        ra0: 208.0, dec0: -57.0, width: 26, height: 6, angle: -18,
+        mythology: 'The great Serpent of the sky is drawn as a long black ribbon of dust stretching from the Coalsack toward the head of Scorpius. In the month when Machacuay first rises, snakes wake upon the earth — the Quechua say the sky serpent gives birth to all earthly serpents, and offerings are made so their bites may be avoided. She coils between the llama and the toad, guardian of the river of stars.'
+      },
+      {
+        name: "Hamp'atu",
+        literalMeaning: 'The Toad',
+        ra0: 267.8, dec0: -26.0, width: 8, height: 5, angle: 0,
+        mythology: 'The Toad squats in the dark dust of the Pipe Nebula in Ophiuchus, swollen with rain. The toad is the herald of the waters: when Hamp\'atu rises in the November mists, the planting season has come. The frogs and toads that sing after the first storms are her children, announcing the rains — and dried toads were buried under fields as offerings to call the water forth.'
+      },
+      {
+        name: 'Atoq',
+        literalMeaning: 'The Fox',
+        ra0: 276.0, dec0: -31.5, width: 7, height: 5, angle: 12,
+        mythology: 'The Fox, a dark cloud trailing near the Toad along the Milky Way, is the Trickster of the Andes — forever hunting the Tinamou across the river of stars yet never catching her. Farmers curse him as the thief of the moon\'s light: eclipses were blamed on the celestial fox biting the moon, and the breath of the fox was said to carry sickness on the night winds.'
+      }
+    ],
     deities: [
       {
         id: 'inti',
@@ -1088,7 +1070,7 @@ const CIVS = {
         { name: 'Capacocha Cycle', val: 'Tied to ruler\'s death + accession' },
         { name: 'Pleiades Year', val: 'Heliacal rise governs planting' }
       ],
-      lore: 'The Inca used quipus — knotted string devices — to record astronomical and calendar data. The site of Machu Picchu (c. 1450 CE) contains the famous Intihuatana stone ("Hitching Post of the Sun"), a carved granite pillar aligned to the four cardinal directions. At the equinoxes, the sun sits directly above the stone with no shadow — a physical calendar synchronised to the cosmos. The Antisuyu, Chinchaysuyu, Cuntisuyu, and Collasuyu quarters of the empire were aligned with the solstice and equinox sunrise directions.'
+      lore: 'The Inca used quipus — knotted string devices — to record astronomical and calendar data. The site of Machu Picchu (c. 1450 AD) contains the famous Intihuatana stone ("Hitching Post of the Sun"), a carved granite pillar aligned to the four cardinal directions. At the equinoxes, the sun sits directly above the stone with no shadow — a physical calendar synchronised to the cosmos. The Antisuyu, Chinchaysuyu, Cuntisuyu, and Collasuyu quarters of the empire were aligned with the solstice and equinox sunrise directions.'
     }
   },
 
@@ -1097,36 +1079,54 @@ const CIVS = {
     themeClass: 'theme-sangam',
     accent: '#B85C28',
     bgImage: '',
+
     deities: [
       {
-        id: 'murugan',
-        name: 'Murugan / Skanda',
-        role: 'War God — Lord of the Young, Beauty and Valor',
-        domains: ['War','Youth','Beauty','Peacock','Hills'],
+        id: 'mayon',
+        name: 'Mayon',
+        role: 'The Dark Lord of Mullai — God of the Forests',
+        domains: ['Forests','Pastures','Cattle','Grace'],
         img: '',
-        myth: 'Murugan, the Tamil deity par excellence, is the most venerated god of the Dravidian south. Son of Shiva and Parvati, born of the fire of six Kritika star-mothers, he defeated the demon Surapadman (split into peacock and rooster — his mount and flag) with his Vel (divine spear). The Sangam literature (3rd c. BCE – 3rd c. CE) identifies him with the kurinji landscape (mountainous hills). His six sacred abodes (Arupadaiveedu) in Tamil Nadu are major pilgrimage sites.',
-        stats: { spear: 'Vel (divine lance given by Parvati)', mount: 'Peacock (Mayura) + Rooster banner', faces: '6 (Shanmukha — 6-faced)', abodes: '6 Arupadaiveedu temples, Tamil Nadu' }
+        myth: 'Mayon — "the dark one", the Tamil Vishnu (Mal) — presides over the mullai, the fragrant jungle and pastureland of the Sangam world. He is the herdsman god who guards cattle and waits in the green forest for his devotees, the darkest-hued of the five lords of the land. Sangam poets sing of his grace (aruL) falling like rain upon the shepherd folk. In later ages he would be carried into the great temples as Vishnu and Krishna, but in the Sangam age he is the dark god of the wild green mullai.',
+        stats: { landscape: 'Mullai (forest and pasture)', flower: 'Konal (jasmine)', people: 'Idaiyar (shepherds)', later_form: 'Vishnu / Krishna' }
       },
       {
-        id: 'amman',
-        name: 'Amman / Mariamman',
-        role: 'Rain Goddess — Great Mother of Dravidia',
-        domains: ['Rain','Smallpox','Fertility','Justice','Heat'],
+        id: 'kadalon',
+        name: 'Kadalon',
+        role: 'The Lord of the Shore — God of Sea and Rain',
+        domains: ['Ocean','Rain','Fishing','Storms'],
         img: '',
-        myth: 'Mariamman ("Mother Mary" in pre-Christian Tamil) is the ancient rain and earth goddess of the Dravidian south, pre-dating Aryan influence. She controls epidemics (especially smallpox and cholera) and brings rain and fertility. Her festivals involve firewalking (thimithi), body piercing, and possession ceremonies. She is the tutelary goddess of South Indian villages — almost every Tamil village has its own Amman temple, often the oldest structure in the settlement.',
-        stats: { symbols: 'Neem leaves (sacred)', festivals: 'Pongal, firewalking (Thimithi)', controls: 'Rain, epidemics, fertility', type: 'Ancient Dravidian (pre-Aryan)' }
+        myth: 'Kadalon — "he of the shore", the Tamil Varunan — rules the neithal, the salt-lashed coastline where the land surrenders to the sea. He commands the oceans, the monsoon clouds, and the fishermen who cast their nets into his waters. Sangam poets invoke him as the mighty lord whose roar is the surf and whose wrath is the shipwreck. He stands parallel to the Vedic Varuna as master of all the waters, and his great shore festival opened each year with the raising of Indra\'s banner.',
+        stats: { landscape: 'Neithal (coast and sea)', flower: 'Alli (water-lily)', people: 'Parathavar (fisherfolk)', later_form: 'Varuna of the seas' }
       },
       {
-        id: 'mudalvan',
-        name: 'Mudalvan / Korravai',
-        role: 'Primal God of Sangam Tradition',
-        domains: ['Victory','War','Paddy','Ancient Tamil'],
+        id: 'seyon',
+        name: 'Seyon',
+        role: 'The Red God of Kurinji — Lord of the Hills',
+        domains: ['Hills','War','Youth','Hunting'],
         img: '',
-        myth: 'Korravai (Tamil: "She who cuts") is the ancient Dravidian war goddess, equivalent to Durga in Tamil tradition — a fierce victor in battle, carrying a sword and shield, her sacred animal the peacock. She rules the Mullai (pastoral) and Palai (wasteland) tinai landscapes. The Sangam age akam (interior/love) and puram (exterior/war) poetry is mapped onto five Dravidian landscapes (tinai), each presided over by different deities and associated with specific flowers, birds, and times of day.',
-        stats: { landscapes: '5 Tamil Tinai (Kurinji, Mullai, Marutham, Neythal, Palai)', period: 'Sangam Age (300 BCE – 300 CE)', texts: 'Tolkappiyam, Purananuru, Akananuru', animal: 'Peacock (in Mullai tinai)' }
+        myth: 'Seyon — "the red one", the Tamil Murugan — is the youthful god of the kurinji hills, where the blue kurinji flowers bloom once in twelve years. He is the hunter-warrior bearing his Vel (divine spear), mounted on the peacock beneath his rooster banner, the beloved youth of the Tamil country. Sangam bards sing of Verrikadal, his sea of battle, and of the twelve-year festival held in his honour. He is the god of the Tamil people par excellence — lord of the high slopes, the red god of victory.',
+        stats: { landscape: 'Kurinji (mountain slopes)', flower: 'Kurinji (Strobilanthes)', people: 'Kuravar (hill hunters)', weapon: 'Vel (divine spear)' }
+      },
+      {
+        id: 'kottravai',
+        name: 'Kottravai',
+        role: 'The Fierce Mother of Palai — Goddess of Victory',
+        domains: ['War','Victory','Wasteland','Motherhood'],
+        img: '',
+        myth: 'Kottravai — "she who cuts" — is the fierce victory goddess of the palai, the sun-scorched wasteland left behind when the rains fail. She is the terrible mother who receives the offerings of warriors before battle and guards the boundaries of the village. In the Sangam age she was worshipped with fish offerings and pongal beneath the veppalai tree; in later centuries her worship flowed into Kali and Durga of the Sanskritic pantheon. Where the five landscapes have their gentle lords, the wasteland keeps its fierce mother.',
+        stats: { landscape: 'Palai (dry wasteland)', flower: 'Veppalai', people: 'Maravar (warriors)', later_form: 'Kali / Durga' }
+      },
+      {
+        id: 'vendhan',
+        name: 'Vendhan',
+        role: 'The King of Marutham — Lord of the Plains',
+        domains: ['Rain','Harvest','Kingship','Festivals'],
+        img: '',
+        myth: 'Vendhan — the Tamil Indra — is king of the marutham, the fertile river-plains where paddy grows and kings hold court. He brings the life-giving rain to the fields and presides over the great Indira Vizha, the festival of the raising of Indra\'s banner, celebrated for days with music, dance and feasting. Sangam kings modelled their rule upon his order: when the king is just, Vendhan sends timely rain; when he is unjust, the plains parch. He is the sovereign of the cultivated plain, god of kingship and harvest.',
+        stats: { landscape: 'Marutham (river plains)', flower: 'Marutham (terminalia)', people: 'Uzhavar (farmers)', festival: 'Indira Vizha (banner-raising)' }
       }
-    ],
-    stars: [
+    ],    stars: [
   {
     "tamilName": "Puravi (புரவி)",
     "literalMeaning": "The Horse",
@@ -1258,7 +1258,7 @@ const CIVS = {
         { name: 'Karthigai Deepam', val: 'Full moon in Karthikai month' },
         { name: 'Aadi Perukku', val: '18th day of Aadi month (river festival)' }
       ],
-      lore: 'The Tolkappiyam (c. 3rd century BCE), the oldest extant Tamil grammar, maps the poetic landscape (Akam/Puram) onto astronomical time. The five tinai landscapes correspond to five times of day, five seasons, and five star groups. Tamil astronomers independently developed the Surya Siddhanta (c. 400 CE) astronomical system, calculating the sidereal year to extraordinary precision. Thiruvalluvar\'s Tirukkural, written c. 200 BCE–200 CE, references celestial order as the foundation of ethical life.'
+      lore: 'The Tolkappiyam (c. 3rd century BC), the oldest extant Tamil grammar, maps the poetic landscape (Akam/Puram) onto astronomical time. The five tinai landscapes correspond to five times of day, five seasons, and five star groups. Tamil astronomers independently developed the Surya Siddhanta (c. 400 AD) astronomical system, calculating the sidereal year to extraordinary precision. Thiruvalluvar\'s Tirukkural, written c. 200 BC–200 AD, references celestial order as the foundation of ethical life.'
     }
   },
 
@@ -1267,54 +1267,36 @@ const CIVS = {
     themeClass: 'theme-china',
     accent: '#C81428',
     bgImage: '',
+
     deities: [
       {
-        id: 'jade_emperor',
-        name: 'Jade Emperor (Yu Huang)',
-        role: 'Supreme Ruler of Heaven — Lord of All Deities',
-        domains: ['Heaven','Justice','All Realms','Administration'],
+        id: 'fuxi',
+        name: 'Fuxi (伏羲)',
+        role: 'The Heavenly Sovereign — First of the Three August Ones',
+        domains: ['Heaven','Creation','Wisdom','Order'],
         img: '',
-        myth: 'The Jade Emperor, Yu Huang Shang Di, rules the celestial bureaucracy that mirrors the imperial Chinese government — a vast divine administration with departments, officials, and ranks. He rose to divinity after 1,750 arduous cultivation periods of 129,600 years each. He governs the Three Realms (Heaven, Earth, Underworld) from his palace in the Thirty-Third Heaven. The annual court session of all gods on the first day of the lunar new year determines the fortunes of all humans for the coming year.',
-        stats: { palace: 'Lingxiao Treasure Hall (33rd Heaven)', period: 'After 1750 cycles of 129,600 years', court: 'Annual divine assembly, New Year', festival: 'Jade Emperor\'s Birthday: 9th day of 1st lunar month' }
+        myth: 'Fuxi, the Heavenly Sovereign of the Three August Ones (Sanhuang), is the culture hero who first ordered the cosmos for humankind. Depicted as a serpent-bodied being whose intertwined tail with his sister-consort Nüwa forms the double spiral of creation, he raised the human race after the great flood. He watched the patterns of heaven and earth and drew the eight trigrams (bagua) that underlie the I Ching; he invented the fishing net, domesticated animals, instituted marriage, and composed the first music. He is the beginning of Chinese civilisation itself — the form of Heaven among the three sovereigns.',
+        stats: { title: 'Tianhuang — the Heavenly Sovereign', inventions: 'Bagua trigrams, fishing nets, marriage', form: 'Human-headed serpent (with Nüwa)', number: 'First of the Sanhuang (三皇)' }
       },
       {
-        id: 'sun_wukong',
-        name: 'Sun Wukong (Monkey King)',
-        role: 'Great Sage Equal to Heaven — Cosmic Rebel',
-        domains: ['Chaos','Wisdom','Power','Journey','Rebellion'],
+        id: 'shennong',
+        name: 'Shennong (神农)',
+        role: 'The Earthly Sovereign — The Divine Farmer',
+        domains: ['Agriculture','Medicine','Earth','Healing'],
         img: '',
-        myth: 'Sun Wukong, born from a stone egg on the Mountain of Flowers and Fruit, fought his way to become "Great Sage Equal to Heaven" — defying the Jade Emperor\'s celestial hierarchy. He stole the Peaches of Immortality, the pills of immortality, and the Dragon King\'s magic staff (Ruyi Jingu Bang — a pillar that held up the sea, 13,000 jin). He was imprisoned under a mountain by the Buddha for 500 years, released to escort the monk Xuanzang on the Journey to the West.',
-        stats: { staff: 'Ruyi Jingu Bang (8.1 tons, shrinks to pin-size)', transformations: '72 earthly transformations', eyes: 'Fire Eyes and Golden Pupils', text: 'Journey to the West (Wu Cheng\'en, 1592)' }
+        myth: 'Shennong, the Earthly Sovereign of the Three August Ones, is the Divine Farmer who taught humanity the plough. Blessed with a transparent belly through which he could watch his own digestion, he tasted hundreds of wild herbs upon his own body to learn which healed and which killed — he is the legendary author of the Shennong Bencao Jing, the oldest Chinese pharmacopoeia. He invented the wooden plough (lei), the hoe, the marketplace, and the cultivation of the five grains. Tradition says he died from a poisonous herb he dared to taste — the ultimate sacrifice of the healer — the form of Earth among the three sovereigns.',
+        stats: { title: 'Dihuang — the Earthly Sovereign', inventions: 'Plough, five grains, herbal medicine', text: 'Shennong Bencao Jing (pharmacopoeia)', form: 'Transparent jade-green belly' }
       },
       {
-        id: 'xuanwu',
-        name: 'Xuanwu',
-        role: 'Dark Warrior — Lord of the North',
-        domains: ['North','Winter','Water','Martial Arts','Long Life'],
+        id: 'huangdi',
+        name: 'Huangdi (黄帝)',
+        role: 'The Yellow Emperor — Ancestor of the Huaxia',
+        domains: ['Statecraft','War','Medicine','Civilisation'],
         img: '',
-        myth: 'Xuanwu ("Dark/Mysterious Warrior") is the guardian of the northern sky — represented by a black tortoise entwined with a serpent, symbolizing the two intertwined forces of yin and yang in their deepest form. He rules the 28 northern lunar mansions (Xiu) and the four directions\' guardian system. He achieved immortality after 42 years of fasting and cultivating the Dao on Wudang Mountain. In the Ming Dynasty he was elevated to Zhenwu Dadi — the patron deity of the dynasty.',
-        stats: { symbol: 'Black tortoise + serpent (yin-yang)', direction: 'North', season: 'Winter', mountain: 'Wudang Mountain (Hubei)' }
-      },
-      {
-        id: 'chang_e',
-        name: "Chang'e",
-        role: 'Moon Goddess — Lady of the Moon Palace',
-        domains: ['Moon','Immortality','Beauty','Jade Rabbit'],
-        img: '',
-        myth: "Chang'e consumed the pill of immortality stolen from Queen Mother of the West (Xi Wangmu) to prevent the tyrant archer Hou Yi from gaining it, and floated up to the moon where she lives in the Cold Palace (Guanghan Gong) with only a jade rabbit for company. Her story has been told for over 3000 years — China's lunar missions are named Chang'e in her honor. The Mid-Autumn Festival (15th day, 8th lunar month) celebrates her ascension.",
-        stats: { palace: 'Guanghan Gong (Cold Moon Palace)', companion: 'Jade Rabbit (grinding immortality medicine)', festival: 'Mid-Autumn Festival (Zhongqiu Jie)', missions: "China's lunar program named 'Chang'e'" }
-      },
-      {
-        id: 'erlang',
-        name: 'Erlang Shen',
-        role: 'The Illustrious Sage — Celestial General',
-        domains: ['War','Hunt','3rd Eye','Loyalty','Virtue'],
-        img: '',
-        myth: 'Erlang Shen, the nephew of the Jade Emperor, is the divine general who subdued Sun Wukong after all other heavenly armies failed. He has a third truth-seeing eye on his forehead and commands a divine dog who assists in battle. He slew the great flood dragon Jialong to save the people of Sichuan (mythologized from the historical engineer Li Bing who tamed the Min River). He wields a three-pointed, double-edged lance.',
-        stats: { weapon: '3-pointed double-edged lance', eye: 'Third truth-seeing eye (forehead)', dog: 'Howling Celestial Dog', achievement: 'Subdued the Monkey King' }
+        myth: 'Huangdi, the Yellow Emperor, is the sovereign who unified the warring tribes at the Battle of Zhuolu, defeating the rebel Chiyou and his fog-wizards with the south-pointing chariot that pierced the enchanted mists. All Chinese people call themselves his descendants. He is credited with the Huangdi Neijing, the foundational text of Chinese medicine, as well as the calendar, the compass, the bow and the boat, while his consort Leizu discovered silk. In the Shiji he stands at the head of all history — the human sovereign among the three, the ancestor of emperors and of the nation.',
+        stats: { title: 'Huangdi — the Yellow Emperor', battle: 'Zhuolu, against Chiyou', text: 'Huangdi Neijing (medicine)', consort: 'Leizu, discoverer of silk' }
       }
-    ],
-    stars: [
+    ],    stars: [
   {
     "chineseMansion": "Jiǎo (角)",
     "literalMeaning": "The Horn",
@@ -1386,6 +1368,24 @@ const CIVS = {
     "declination": "-08° 39' 31\"",
     "magnitude": 1.99,
     "mythology": "A solitary bright star in a dark void. Used by imperial court astronomers as a major baseline clock star to determine the absolute peak of mid-summer."
+  },
+  {
+    "chineseMansion": "Zhāng (张)",
+    "literalMeaning": "The Extended Net",
+    "modernName": "Upsilon-1 Hydrae",
+    "rightAscension": "10h 49m 33.9s",
+    "declination": "-14° 49' 26\"",
+    "magnitude": 3.87,
+    "mythology": "The spread net of the Vermilion Bird, strung between Hydra and Crater; governed feasting and the opening of the hunting season."
+  },
+  {
+    "chineseMansion": "Yì (翼)",
+    "literalMeaning": "The Wings",
+    "modernName": "Alpha Crateris (Alkes)",
+    "rightAscension": "10h 59m 47.5s",
+    "declination": "-18° 18' 11\"",
+    "magnitude": 4.07,
+    "mythology": "The wings of the Vermilion Bird themselves; a mansion of music, dance, and the harmonising of distant travellers."
   },
   {
     "chineseMansion": "Zhěn (軫)",
@@ -1530,15 +1530,32 @@ const CIVS = {
     "declination": "+22° 30' 49\"",
     "magnitude": 2.87,
     "mythology": "Marks the boundary opening of the celestial well within the Vermilion Bird quadrant, tracking moisture and cosmic water sources."
-  }
-],
+  },
+  {
+    "chineseMansion": "Guǐ (鬼)",
+    "literalMeaning": "The Ghost",
+    "modernName": "Theta Cancri",
+    "rightAscension": "08h 32m 42.0s",
+    "declination": "+18° 05' 00\"",
+    "magnitude": 5.33,
+    "mythology": "The Ghost mansion wraps the misty Praesepe cluster (M44), read by Chinese sky-watchers as a vaporous ghost-fog; an inauspicious mansion governing the spirits of the dead."
+  },
+  {
+    "chineseMansion": "Liǔ (柳)",
+    "literalMeaning": "The Willow",
+    "modernName": "Delta Hydrae",
+    "rightAscension": "08h 37m 39.4s",
+    "declination": "+05° 42' 13\"",
+    "magnitude": 4.14,
+    "mythology": "A drooping willow bough on the neck of the Vermilion Bird; its heliacal rising marked the wood-cutting and mourning rites."
+  },],
     calendar: {
       title: 'Chinese Lunisolar Calendar — Heavenly Stems and Earthly Branches',
       system: 'The Chinese calendar is lunisolar — months follow the Moon, while the year tracks the Sun, with intercalary months added every ~3 years. Its most distinctive feature is the sexagenary cycle: 10 Heavenly Stems (Tiangan) × 12 Earthly Branches (Dizhi) = 60-year cycle, governing personal fate, politics, and cosmic rhythm.',
       math: [
         'Sexagenary Cycle = LCM(10,12) = 60 years',
         'Chinese Mean Synodic Month = 29.530585 days (excellent precision)',
-        'Chinese Tropical Year (4th c. BCE) = 365.25 days',
+        'Chinese Tropical Year (4th c. BC) = 365.25 days',
         'Intercalary month (Runyue) added when no major solar term falls in month',
         '24 Solar Terms (Jieqi): sun moves 15° along ecliptic = ~15.2 days',
         'Metonic-equivalent: 7 leap months per 19 years = 235 months',
@@ -1555,7 +1572,7 @@ const CIVS = {
         { name: 'Chinese Solar Year', val: '365.2422 days' },
         { name: 'Runyue (Leap Month)', val: '7 months per 19-year cycle' }
       ],
-      lore: 'The oracle bones of the Shang Dynasty (c. 1200 BCE) contain the earliest written astronomical records in China — solar and lunar eclipse observations, records of new moons, and the sexagenary cycle. The Shi Jing (Book of Odes, c. 1000 BCE) references stars as seasonal markers for agriculture. The Han Dynasty astronomer Zhang Heng (78–139 CE) built the first seismoscope and an armillary sphere driven by a water-clock. Chinese astronomers recorded supernovae that modern astronomers identify as known remnants — the Crab Nebula (SN 1054 CE) was observed as a "guest star" visible in daylight for 23 days.'
+      lore: 'The oracle bones of the Shang Dynasty (c. 1200 BC) contain the earliest written astronomical records in China — solar and lunar eclipse observations, records of new moons, and the sexagenary cycle. The Shi Jing (Book of Odes, c. 1000 BC) references stars as seasonal markers for agriculture. The Han Dynasty astronomer Zhang Heng (78–139 AD) built the first seismoscope and an armillary sphere driven by a water-clock. Chinese astronomers recorded supernovae that modern astronomers identify as known remnants — the Crab Nebula (SN 1054 AD) was observed as a "guest star" visible in daylight for 23 days.'
     }
   }
 };
@@ -1565,34 +1582,39 @@ const CIVS = {
    Maps each civilization key to its historically active epoch range.
    ============================================================ */
 const CIV_TIMELINES = {
-  vedic:   { min: -10000, max: 2026, label: 'Vedic Indians (10,000 BCE – Present)' },
-  egypt:   { min: -8000,  max: 600,  label: 'Ancient Egyptians (8000 BCE – 600 CE)' },
-  sangam:  { min: -2300,  max: 2026, label: 'Sangam Indians (2300 BCE – Present)' },
-  greece:  { min: -1200,  max: 400,  label: 'Ancient Greeks (1200 BCE – 400 CE)' },
-  maya:    { min: -2000,  max: 1600, label: 'Maya Civilization (2000 BCE – 1600 CE)' },
-  aztec:   { min: 1100,   max: 1521, label: 'Aztec Empire (1100 CE – 1521 CE)' },
-  inca:    { min: 1200,   max: 1572, label: 'Inca Empire (1200 CE – 1572 CE)' },
-  china:   { min: -1600,  max: 1912, label: 'Imperial China (1600 BCE – 1912 CE)' },
-  babylon: { min: -2500,  max: 539,  label: 'Babylonia (2500 BCE – 539 BCE)' }
+  egypt:   { min: -6000,  max: -1000, step: 1, label: 'Ancient Egyptians (6000 BC – 1000 BC)' },
+  vedic:   { min: -7000,  max: -2000, step: 1, label: 'Vedic Indians (7000 BC – 2000 BC)' },
+  sangam:  { min: -300,   max: 300,   step: 1, label: 'Sangam Indians (300 BC – 300 AD)' },
+  babylon: { min: -4000,  max: -2000, step: 1, label: 'Babylonia (4000 BC – 2000 BC)' },
+  china:   { min: -3000,  max: 1000,  step: 1, label: 'Imperial China (3000 BC – 1000 AD)' },
+  greece:  { min: -1000,  max: 1,     step: 1, label: 'Ancient Greeks (1000 BC – 1 AD)' },
+  aztec:   { min: 1300,   max: 1500,  step: 1, label: 'Aztec Empire (1300 AD – 1500 AD)' },
+  maya:    { min: -2000,  max: 1500,  step: 1, label: 'Maya Civilization (2000 BC – 1500 AD)' },
+  inca:    { min: 1200,   max: 1500,  step: 1, label: 'Inca Empire (1200 AD – 1500 AD)' }
 };
 
 
 /* ============================================================
    PRECESSION ALGORITHM
    Approximate axial precession: ~1° per 71.6 years (26,000 year cycle)
-   We shift star coordinates based on years from J2000.0 (year 2000 CE)
+   We shift star coordinates based on years from J2000.0 (year 2000 AD)
    ============================================================ */
 function precess(ra, dec, yearCE) {
   const T = (yearCE - 2000) / 100; // Julian centuries from J2000
-  // General precession in longitude (arcsec/century): ψ = 5029.097" + ...
-  const psi = (5029.097 + 22.226 * T) * T / 3600; // degrees
-  // Obliquity shift (approximate, degrees):
-  const eps = 23.439 - 0.013 * T;
-  // Simplified: rotate RA by precession angle, adjust DEC slightly
-  const newRA = ((ra + psi) % 360 + 360) % 360;
-  const decShift = 0.05 * T * Math.cos((ra * Math.PI) / 180);
-  const newDec = Math.max(-89, Math.min(89, dec + decShift));
-  return { ra: newRA, dec: newDec, eps };
+  // IAU 1976 precession angles (arcsec): zeta, z, theta
+  const zeta = (2306.2181 * T + 0.30188 * T * T + 0.017998 * T ** 3) / 3600 * Math.PI / 180;
+  const z    = (2306.2181 * T + 1.09468 * T * T + 0.018203 * T ** 3) / 3600 * Math.PI / 180;
+  const th   = (2004.3109 * T - 0.42665 * T * T - 0.041833 * T ** 3) / 3600 * Math.PI / 180;
+  const raR = ra * Math.PI / 180;
+  const decR = dec * Math.PI / 180;
+  const cosDec = Math.cos(decR);
+  const A = cosDec * Math.sin(raR + zeta);
+  const B = Math.cos(th) * cosDec * Math.cos(raR + zeta) - Math.sin(th) * Math.sin(decR);
+  const C = Math.sin(th) * cosDec * Math.cos(raR + zeta) + Math.cos(th) * Math.sin(decR);
+  let newRA = (Math.atan2(A, B) + z) * 180 / Math.PI;
+  newRA = ((newRA % 360) + 360) % 360;
+  const newDec = Math.asin(Math.max(-1, Math.min(1, C))) * 180 / Math.PI;
+  return { ra: newRA, dec: newDec };
 }
 
 /* ============================================================
@@ -1670,6 +1692,7 @@ window.addEventListener('resize', () => {
    STARMAP RENDERER
    ============================================================ */
 let starmapStars = []; // {x, y, r, color, name, modern, data}
+let starmapClouds = []; // {x, y, rx, ry, cloud} — Inca dark-cloud constellations
 
 function drawStarmap() {
   const civ = CIVS[state.activeCiv];
@@ -1723,6 +1746,52 @@ function drawStarmap() {
     starmapCtx.arc(fx, fy, fr, 0, Math.PI * 2);
     starmapCtx.fillStyle = `rgba(200,220,255,${fa})`;
     starmapCtx.fill();
+  }
+
+  // Inca dark-cloud constellations (yana phuyu) — drawn as soft black voids
+  starmapClouds = [];
+  if (state.activeCiv === 'inca' && civ.darkClouds) {
+    civ.darkClouds.forEach(cloud => {
+      const p = precess(cloud.ra0, cloud.dec0, state.epochYear);
+      const x = ((p.ra / 360) * W * 1.2 - W * 0.1 + W) % W;
+      const y = H * 0.5 - (p.dec / 90) * (H * 0.45);
+      const pxPerDegX = (W * 1.2) / 360;
+      const pxPerDegY = (H * 0.45) / 90;
+      const rx = Math.max(6, (cloud.width / 2) * pxPerDegX);
+      const ry = Math.max(5, (cloud.height / 2) * pxPerDegY);
+      const rot = (cloud.angle || 0) * Math.PI / 180;
+      const rMax = Math.max(rx, ry);
+      starmapCtx.save();
+      starmapCtx.translate(x, y);
+      starmapCtx.rotate(rot);
+      starmapCtx.scale(1, ry / rMax);
+      const cGrad = starmapCtx.createRadialGradient(0, 0, 0, 0, 0, rMax);
+      cGrad.addColorStop(0, 'rgba(1,1,10,0.94)');
+      cGrad.addColorStop(0.55, 'rgba(2,2,14,0.72)');
+      cGrad.addColorStop(1, 'rgba(2,2,14,0)');
+      starmapCtx.beginPath();
+      starmapCtx.arc(0, 0, rMax, 0, Math.PI * 2);
+      starmapCtx.fillStyle = cGrad;
+      starmapCtx.fill();
+      starmapCtx.restore();
+      starmapCtx.fillStyle = 'rgba(185,175,215,0.85)';
+      starmapCtx.font = 'italic 11px Cinzel, serif';
+      starmapCtx.fillText(cloud.name, x + rx * 0.7 + 6, y + ry * 0.7 + 4);
+      starmapClouds.push({
+        x, y, rx, ry,
+        star: {
+          _name: cloud.name,
+          _modern: 'Dark Nebula (Yana Phuyu)',
+          _mag: '—',
+          _color: '#9B8EC4',
+          _myth: cloud.mythology,
+          _ra0: cloud.ra0,
+          _dec0: cloud.dec0,
+          mass: '—', distance: '—', radius: '—',
+          literalMeaning: cloud.literalMeaning
+        }
+      });
+    });
   }
 
   // Draw civilization stars with precession
@@ -1811,6 +1880,11 @@ starmapCanvas.addEventListener('click', e => {
   const rect = starmapCanvas.getBoundingClientRect();
   const sx = (e.clientX - rect.left) * (starmapCanvas.width / rect.width);
   const sy = (e.clientY - rect.top) * (starmapCanvas.height / rect.height);
+  starmapClouds.forEach(c => {
+    const dx = (sx - c.x) / c.rx;
+    const dy = (sy - c.y) / Math.max(c.ry, 1);
+    if (dx * dx + dy * dy < 1) openStarModal(c.star);
+  });
   starmapStars.forEach(s => {
     const d = Math.sqrt((sx - s.x) ** 2 + (sy - s.y) ** 2);
     if (d < s.r * 5) openStarModal(s.star);
@@ -1826,10 +1900,12 @@ epochSlider.addEventListener('input', e => {
   drawStarmap();
 });
 
+function formatEpochYear(yr) {
+  return yr < 0 ? `${Math.abs(yr)} BC` : (yr === 0 ? '1 AD' : `${yr} AD`);
+}
+
 function updateEpochDisplay() {
-  const yr = state.epochYear;
-  const label = yr < 0 ? `${Math.abs(yr)} BCE` : (yr === 0 ? '1 CE' : `${yr} CE`);
-  epochDisplay.textContent = label;
+  epochDisplay.textContent = formatEpochYear(state.epochYear);
 }
 
 /* ============================================================
@@ -1848,14 +1924,22 @@ function loadCivilization(civKey) {
   const civ = CIVS[civKey];
   const timeline = CIV_TIMELINES[civKey] || { min: -10000, max: 2026 };
 
-  // Snap epoch slider to civilization's boundaries
+  // Snap epoch slider to civilization's boundaries and start at its beginning
   epochSlider.min = timeline.min;
   epochSlider.max = timeline.max;
-  // Clamp current year to new range
-  if (state.epochYear < timeline.min) state.epochYear = timeline.min;
-  if (state.epochYear > timeline.max) state.epochYear = timeline.max;
+  epochSlider.step = timeline.step || 1;
+  state.epochYear = timeline.min;
   epochSlider.value = state.epochYear;
+  state.epochYear = parseInt(epochSlider.value, 10);
   updateEpochDisplay();
+
+  // Update visible slider range labels
+  const minLabel = $('slider-min-label');
+  const maxLabel = $('slider-max-label');
+  const headerRange = $('epoch-range-label');
+  if (minLabel) minLabel.textContent = formatEpochYear(timeline.min);
+  if (maxLabel) maxLabel.textContent = formatEpochYear(timeline.max);
+  if (headerRange) headerRange.textContent = `${formatEpochYear(timeline.min)} – ${formatEpochYear(timeline.max)}`;
 
   // Update slider label if element exists
   const sliderLabel = document.getElementById('timeline-label');
@@ -2023,7 +2107,7 @@ function openStarModal(star) {
 
   const yearCE = state.epochYear;
   const p = precess(sRa0, sDec0, yearCE);
-  const epochLabel = yearCE < 0 ? `${Math.abs(yearCE)} BCE` : `${yearCE} CE`;
+  const epochLabel = yearCE < 0 ? `${Math.abs(yearCE)} BC` : `${yearCE} AD`;
   const raHMS = decimalRaToHMS(p.ra);
   const decDMS = decimalDecToDMS(p.dec);
 
